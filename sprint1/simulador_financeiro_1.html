@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Simulador Financeiro Valley's Tech</h1>
+
+    Insira valor que é gasto com o vinhedo (englobe todos os custos envolvidos no processo de conservação do vinhedo, incluindo serviços, mão-de-obra e custos indiretos): <input id="input_custo">
+    <br>
+
+    Insira o valor de lucro do vinhedo no período de 1 ano: <input id="input_lucro">
+    <br>
+
+    Insira a porcentagem de prejuízo/perda anual hipotético : <input id="input_preju">%
+    <br>
+
+    <button onclick="sem_vt()">Sem o monitoramento da Valley's Tech</button>
+    <button onclick="com_vt()">Valley's Tech Solution</button>
+
+    
+    <p id="p_simulacao"></p>
+
+</body>
+</html>
+<script>
+    function sem_vt() {
+        var custo = Number(input_custo.value);
+        var lucro = Number(input_lucro.value);
+        var preju = Number(input_preju.value);
+        var bruto = lucro - custo;
+        var calculo_preju = (preju/100) * bruto;
+        var valor_final = bruto - calculo_preju;
+
+        p_simulacao.innerHTML = `<h3 style="color: red">Seu lucro bruto, considerando a perda de R$${calculo_preju} será de R$${valor_final}, sem a solução da Valley's Tech.<h3>`
+
+    }
+
+    function com_vt() {
+        var custo = Number(input_custo.value);
+        var lucro = Number(input_lucro.value);
+        var preju = Number(input_preju.value);
+        var bruto = lucro - custo;
+        var calculo_preju = (preju/100) * bruto;
+        var valor_final = bruto - calculo_preju;
+        var reducao_vt = calculo_preju * 0.2;
+        var valor_finalVT = bruto - reducao_vt;
+
+        p_simulacao.innerHTML = `<h3 style="color: blue">Seu lucro bruto, considerando a redução da perda em 20% pela solução Valley's Tech, de R$${valor_final} será R$${valor_finalVT}.<h3>`
+
+    }
+</script>

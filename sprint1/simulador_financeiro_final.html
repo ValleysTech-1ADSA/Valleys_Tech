@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Valley's Tech</title>
+    <h1>Simulador Financeiro Valley's Tech</h1>
+  </head>
+  <body>
+    Insira a quantidade de hectares:
+    <input id="input_hectar" /><br />
+    Insira a quantidade de caixas produzidas por hectar:
+    <input id="input_qtd_caixa" /><br />
+    Insira o valor do lucro por caixa em reais:
+    <input id="input_valor_caixa" />
+    <br />
+    Insira o valor da perda anual em reais:
+    <input id="input_perda" /><br />
+
+    <button onclick="semVt()">Sem o monitoramento da Valley's Tech</button>
+    <button onclick="comVt()">Valley's Tech Solution</button>
+
+    <div id="div_simulacao">
+        
+    </div>
+  </body>
+</html>
+<script>
+  function semVt() {
+    var hectar = Number(input_hectar.value);
+    var qtdCaixa = Number(input_qtd_caixa.value);
+    var valorCaixa = Number(input_valor_caixa.value);
+    var perda = Number(input_perda.value);
+    var liquidoCaixa = qtdCaixa * valorCaixa;
+    var bruto = liquidoCaixa * hectar;
+    var porcentagemPerda = ((perda * 100) / bruto) / 100;
+    var valorPerda = bruto * porcentagemPerda;
+    var liquido = bruto - valorPerda;
+
+
+
+
+    div_simulacao.innerHTML += `<h3 style="color: red"> 
+        
+        Considerando que sua produção tem ${hectar} hectares, que cada hectar produz ${qtdCaixa} caixas e que cada caixa é vendida por R$${valorCaixa}, seu lucro bruto por hectar é de R$${bruto}. <br> <br>
+
+        Sem o monitoramento da Valley's Tech, estimamos que o prejuízo da sua produção é em torno de ${porcentagemPerda * 100}% que equivale a R$${valorPerda}, gerando um lucro líquido de R$${liquido}<h3>`;
+        
+  }
+
+  function comVt() {
+    var hectar = Number(input_hectar.value);
+    var qtdCaixa = Number(input_qtd_caixa.value);
+    var valorCaixa = Number(input_valor_caixa.value);
+    var perda = Number(input_perda.value);
+    var liquidoCaixa = qtdCaixa * valorCaixa;
+    var bruto = liquidoCaixa * hectar;
+    var porcentagemPerda = (perda * 100) / bruto;
+    var valorPerda = bruto * porcentagemPerda;
+    var liquido = bruto - valorPerda;
+
+    var solucao = 60;
+    var valorPerdaReduzida = perda - (perda * (solucao / 100));
+    var ganho = perda*(solucao/100)
+    var liquidoReduzido = bruto - valorPerdaReduzida;
+
+    div_simulacao.innerHTML += `<h3 style="color: blue">Com o monitoramento da Valley's Tech, garantimos que a redução da perda será de ${solucao}%, que equivale a um ganho de R$${ganho}. <br><br>Logo, o lucro total da sua produção com a nossa solução será de R$${liquidoReduzido} <br><br>`;
+  }
+</script>
