@@ -1,4 +1,3 @@
-<body background="images/grapeWhite.png">
 # Valleys_Tech
 <p align="center">
     <img src="images/grapeRed.png" height="128">
@@ -40,4 +39,4 @@
 😎 <a href="https://github.com/MarcceloSpinelli">Marccelo Spinelli</a><br>
 🤓 <a href="https://github.com/JRamonPere">Ramon Pereira</a><br>
 🤖 <a href="https://github.com/vitoramosc">Vitor Ramos</a><br>
-</body>
+
