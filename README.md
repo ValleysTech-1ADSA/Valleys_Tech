@@ -9,7 +9,7 @@
 
 <p align="center">
 
-• Reuniões serão sempre iniciadas as terça-feiras às 20:00.
+• Reuniões serão sempre iniciadas às terça-feiras às 20:00.
 
 • Perante a necessidade de tempo, será discutida se há demanda de uma reunião ao sábado da respectiva semana. Neste mesmo debate será definido o horário de encontro.
 
