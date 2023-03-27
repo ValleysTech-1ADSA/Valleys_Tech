@@ -1,4 +1,4 @@
-# Valleys_Tech
+<h1 align="center"> Valleys_Tech </h1>
 <p align="center">
     <img src="images/grapeRed.png" height="128">
     <h2 align="center">🍇 Uma solução moderna para uma arte milenar </h2>
