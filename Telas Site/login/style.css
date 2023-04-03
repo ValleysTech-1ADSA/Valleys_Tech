@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@400;500;800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto+Serif:wght@400;500;800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.header-top{
+    background-color: #F81A42;
+    height: 80px;
+    padding: 0 10%;
+}
+
+.navegation{
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+    color: white;
+    font-weight: 100;
+
+}
+
+.nav-ul{
+    display: flex;
+    gap: 20px;
+
+}
+
+.list-ul{
+    list-style: none;
+    
+}
+
+.navegation .nav-ul .list-logo{
+    height: 60px;
+    
+}
+
+.navegation .nav-ul a{
+    text-decoration: none;
+    color: #FFFFFF;
+    
+}
+
+.section{
+    height: fit-content;
+    
+
+}
+
+.section .container .img-banner{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.section .container .img-banner img{
+    height: 80px;
+
+}
+
+.section .container .login-form{
+    height: fit-content;
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section .container .login-form .container-form{
+
+}
+
+.section .container .login-form .form{
+    width:fit-content;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-text{
+    height: 40px;
+    width: 380px;
+    border: 1px solid #F81A42;
+    border-radius: 5px;
+    padding: 0 10px;
+}
+
+
+.login-options a{
+    text-decoration: none;
+    color: #F81A42;
+}
+
+
+.remember-login{
+    display: flex;
+}
+
+.login-options p{
+    font-size: 12px;
+}
+
+.section .container .login-form .login-options{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.buttons-form{
+    margin: 15px;
+    text-align: center;
+    
+}
+
+.buttons-form p{
+    margin-top: 10px;
+    font-size: 12px;
+    color: #F81A42;
+}
+
+.buttons-form .button{
+    width: 170px;
+    height: 30px;
+    border-radius: 5px;
+    border: #F81A42 1px solid;
+}
+
+.buttons-form .button-login{
+    background-color: #F81A42;
+    color: #FFFFFF;
+}
+
+.buttons-form .button-cadastrar{
+    background-color: #FFFFFF;
+    color: #F81A42;
+}
+
+.button-login:hover {
+    background-color: #FFFFFF; /* Green */
+    color: #F81A42;
+  }
+
+  .button-cadastrar:hover {
+    background-color: #F81A42; /* Green */
+    color: #FFFFFF;
+  }
+
+.footer{
+    height: fit-content;
+    background-color: #F81A42;
+    padding: 60px 10%;;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer .section {
+    display: flex;
+}
+
+.footer .section .img-footer{
+    height: 80px;
+    margin-right: 40px;
+}
+
+.footer .section ul li a{
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: 100;
+}
+
+.footer .section ul li{
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: 100;
+}
+
+.footer .section .back-top{
+    height: 100px;
+    width: 100px;
+    border: 0 solid;
+    border-radius: 50px;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer .section .back-top .seta-icon{
+    height: 25%;
+    text-align: center;
+}

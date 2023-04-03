@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@400;500;800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto+Serif:wght@400;500;800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+}
+
+.header-top{
+    background-color: #F81A42;
+    height: 80px;
+    padding: 0 10%;
+}
+
+.navegation{
+    max-width: 860px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+    color: white;
+    font-weight: 100;
+
+}
+
+.nav-ul{
+    display: flex;
+    gap: 20px;
+
+}
+
+.list-ul{
+    list-style: none;
+    
+}
+
+.navegation .nav-ul .list-logo{
+    height: 60px;
+    
+}
+
+.navegation .nav-ul a{
+    text-decoration: none;
+    color: #FFFFFF;
+    
+}
+
+.section .container-top{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #F81A42;
+
+}
+
+.section .container-top .article{
+    max-width: 860px;
+    margin: auto;
+    color: #FFFFFF;
+    display: flex;
+    height: 100%;
+
+}
+
+.section .container-top .article .article-left  {
+    width: 50%;
+    height: fit-content;
+
+}
+
+.section .container-top .article .article-left .img-banner{
+    width: 100%;
+    height: 50%;
+    max-width: ;
+}
+
+.section .container-top .article .article-rigth{
+    width: 50%;
+    display: flex;
+    align-items: end;
+}
+
+.section .container-top .article .article-rigth .box{
+    padding: 30px;
+}
+
+.section .container-top .article .article-rigth .box #title h1{
+    font-family: 'Roboto Serif', serif;
+    font-weight: 400;
+    font-size: 32px;
+    margin-bottom: 20px;
+
+}
+
+.section .container-top .article .article-rigth .box #article-text{
+    font-family: Montserrat;
+    font-weight: 300;
+}
+
+.section .container .article2{
+    padding: 100px;
+    max-width: 860px;
+    margin: auto;
+    background-color: #FFFFFF;
+}
+
+.section .container .article2 .article2-container{
+    display: flex;
+}
+
+.section .container .article2 .article2-text{
+    display: flex;
+    align-items: end;
+}
+
+.section .container .article2 .article2-container .vector{
+    height: fit-content;
+}
+
+.section .container .article2 .article2-container .img-float{
+    height: 200px;
+}
+
+.img-float{
+    float: inline-end;
+}
+
+.footer{
+    height: fit-content;
+    background-color: #F81A42;
+    padding: 60px 10%;;
+    
+}
+
+.footer .container {
+    max-width: 860px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer .section {
+    display: flex;
+}
+
+.footer .section .img-footer{
+    height: 80px;
+    margin-right: 40px;
+}
+
+.footer .section ul li a{
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: 100;
+}
+
+.footer .section ul li{
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: 100;
+}
+
+.footer .section .back-top{
+    height: 100px;
+    width: 100px;
+    border: 0 solid;
+    border-radius: 50px;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer .section .back-top .seta-icon{
+    height: 25%;
+    text-align: center;
+}
