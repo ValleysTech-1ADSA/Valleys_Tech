@@ -1,0 +1,7 @@
+.container {
+    display: flex;
+}
+
+.container .hearder {
+    justify-content: first baseline;
+}
