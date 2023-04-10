@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador</title>
+</head>
+<body>  
+    <h1>
+        Simule Aqui!
+    </h1><br><br>
+
+    Quantidade de KG produzido semanal: <input id="input_kg_produzido"> <br><br>
+
+    Valor do KG: <input id="input_valor_kg"><br><br>
+
+    <button onclick="calcular()">Calcular</button>
+
+    <button onclick="calcularano()">Calcular</button>
+
+
+    <p id="exibir"> </p>
+
+</body>
+</html>
+<script> 
+    function calcular () {
+        var kg_produzido = Number (input_kg_produzido.value);
+        var valor_kg = Number (input_valor_kg.value);
+        var valor_bruto = valor_kg * kg_produzido; 
+
+
+        var valor_desc = valor_bruto * 0.20  
+        var valor_bruto_desc =   valor_bruto - valor_desc
+        
+        var valor_vt = valor_bruto - (valor_bruto * 0.10)
+
+        exibir.innerHTML = `Sem vt seu lucro semanal está ${valor_bruto_desc}, tendo perda de ${valor_desc}.
+        Com a vt seu lucro pode ser ${valor_vt}.
+        `
+
+    }
+
+    function calcularano () {
+        var kg_produzido = Number (input_kg_produzido.value);
+        var valor_kg = Number (input_valor_kg.value);
+        var valor_bruto = valor_kg * kg_produzido;
+
+        var valor_desc = valor_bruto * 0.20 
+        var valor_bruto_desc =  valor_bruto - valor_desc  
+        
+        var valor_vt = valor_bruto - (valor_bruto * 0.10)
+
+        exibir.innerHTML = `Sem vt seu lucro semanal está ${valor_bruto_desc * 48}, tendo perda de ${valor_desc * 48}.
+        Com a vt seu lucro pode ser ${valor_vt * 48}.`
+
+    }
+
+</script>

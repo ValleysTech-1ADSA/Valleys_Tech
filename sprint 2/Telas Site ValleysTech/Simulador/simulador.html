@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simule</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header-top">
+        <nav class="navegation">
+            <ul class="nav-ul">
+                <li class="list-ul li-hover agora"><a href="#">SIMULE</a></li>
+                <li class="list-ul li-hover"><a href="../DashBoard Valleys/index.html">DASHBOARD</a></li>
+            </ul>
+            <ul class="nav-ul">
+                <li class="list-ul"><a href="../index.html"><img src="images/grapeWhite.png" alt="LOGO"
+                            class="list-logo"></a></li>
+            </ul>
+            <ul class="nav-ul">
+                <li class="list-ul li-hover"><a href="#">CONTATO</a></li>
+                <li class="list-ul li-hover"><a href="Login.html">LOGIN</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="imagem-inicial">
+        <img src="images/vineyard2.png" alt="">
+    </div>
+    <section>
+        <h1>Simule seus ganhos com a nossa solução</h1>
+        <div class="container">
+            <div class="imagens">
+                <img src="images/financeiro.png" alt="">
+                <img src="images/dinheiro1.png" alt="">
+                <img src="images/dinheiro2.png" alt="">
+            </div>
+            <div class="texto">
+                <p>
+                    Você já parou para pensar em quanto prejuízo sua empresa pode estar
+                    tendo devido à falta de monitoramento adequado do solo em seus vinhedos?
+                </p>
+                <p>
+                    Nosso simulador financeiro é capaz de calcular com precisão a redução de
+                    prejuízo que sua empresa terá ao implementar um monitoramento de solo eficiente
+                    em seus hectares de vinhedos. Com dados precisos e uma análise minuciosa, o simulador
+                    te dará uma visão clara do que precisa ser feito para reduzir seus custos e aumentar
+                    seus lucros.
+                </p>
+                <p>
+                    Não perca mais tempo e dinheiro, experimente agora mesmo nosso simulador financeiro
+                    e transforme sua empresa de viticultura em um sucesso absoluto!
+                </p>
+            </div>
+        </div>
+        <hr>
+        <div class="calculo">
+            <div class="div_inputs">
+                <div class="inputs">
+                    Quantidade de uvas produzidas por semana (kg): <br> <input id="input_quantidade">
+                </div>
+                <div class="inputs">
+                    Valor de venda do produto por quilo: <br> <input id="input_valor_venda">
+                </div>
+                <div class="div_botao">
+                    <button id="botao-simular" onclick="calcular()">Simular</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="section">
+                <img class="img-footer" src="images/grapeWhite.png" alt="">
+                <ul>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="Login.html">Login</a></li>
+                    <li><a href="#">Simule</a></li>
+                    <li><a href="#">Produto</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </div>
+            <div class="section">
+                <a href="#">
+                    <div class="back-top">
+                    <img src="images/Seta-Cima-Png-removebg-preview.png" alt="" class="seta-icon">
+                    </div>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <div class="popup disable" id="popup_sim">
+        <div class="fechar-popup"><a href="">x</a></div>
+        <div class="conteudo-popup">
+           <div class="titulo-popup">
+            <h1>RESULTADO</h1>
+           </div>
+           <p id="p_resultado">
+            
+           </p>
+           <div class="imagem_popup">
+            <img src="images/logoWhite.jpg" alt="">
+           </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+<script>
+    var kg_semana = 0;
+    var preco_kg = 0;
+
+    function mostrar_popup() {
+        popup_sim.classList.remove("disable");
+    }
+    
+
+    function calcular() {
+        kg_semana = Number(input_quantidade.value);
+        preco_kg = Number(input_valor_venda.value);
+        var valor_bruto = kg_semana * preco_kg;
+        var valor_descontado = valor_bruto * 0.8;
+        var valor_vt = valor_bruto - (valor_bruto * 0.1);
+        p_resultado.innerHTML = `<p>Sem a Valley's Tech, seus ganhos são de aproximadamente <span>R$${valor_descontado * 4}</span> por mês.</p> <br>
+                                <p>Com a Valley's Tech, seus ganhos podem chegar a até <span>R$${valor_vt * 4}</span> por mês.</p> <br>
+                                <p>Por ano esse valor pode chegar a até <span>R$${valor_vt * 48}</span>.</p>`
+
+        mostrar_popup();
+    }
+
+</script>
