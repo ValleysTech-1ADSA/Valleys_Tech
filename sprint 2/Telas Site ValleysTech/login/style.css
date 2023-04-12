@@ -49,36 +49,41 @@
     
 }
 
+.section-banner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 700px;
+}
+
 .section{
-    height: fit-content;
-    
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
 }
 
-.section .container .img-banner{
+
+
+.section-banner .container .img-banner{
     display: flex;
     justify-content: center;
     margin-top: 10px;
 }
 
-.section .container .img-banner img{
+.section-banner .container .img-banner img{
     height: 80px;
 
 }
 
-.section .container .login-form{
+.section-banner .container .login-form{
     height: fit-content;
     margin: 50px;
     display: flex;
-    flex-direction: column;
     align-items: center;
 }
 
-.section .container .login-form .container-form{
-
-}
-
-.section .container .login-form .form{
+.section-banner .container .login-form .form{
     width:fit-content;
     display: flex;
     flex-direction: column;
@@ -107,7 +112,7 @@
     font-size: 12px;
 }
 
-.section .container .login-form .login-options{
+.section-banner .container .login-form .login-options{
     display: flex;
     justify-content: space-between;
     margin-top: 10px;

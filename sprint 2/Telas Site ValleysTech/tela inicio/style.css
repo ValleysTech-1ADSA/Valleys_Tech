@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@400;500;800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto+Serif:wght@400;500;800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap');
 
 
 * {
@@ -44,6 +49,7 @@
 .header a {
     text-decoration: none;
     color: white;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .nav-list{
@@ -55,11 +61,13 @@
 .list-nav{
     list-style: none;
     
+    
 }
 
 .list-nav-center {
     margin-top: -20px;
     margin-right: 10px;
+    
 }
 
 .container-right .container-right-txt  {
