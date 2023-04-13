@@ -90,7 +90,7 @@ a {
     font-family: 'Montserrat', sans-serif;
     color: white;
     display: flex;
-    font-weight: 600;
+    font-weight: 200;
     font-size: 25px;
 
 }
@@ -136,7 +136,7 @@ a {
 #sobre_nos_txt {
     font-family: 'Montserrat', sans-serif;
     display: flex;
-    font-weight: 600;
+    font-weight: 200;
     font-size: 25px;
 }
 
@@ -166,7 +166,7 @@ a {
 .mid_txt2 {
     font-family: 'Montserrat', sans-serif;
     display: flex;
-    font-weight: 600;
+    font-weight: 200;
     font-size: 25px;
 }
 
@@ -207,7 +207,7 @@ a {
 #txt_fundo4 {
     font-family: 'Montserrat', sans-serif;
     display: flex;
-    font-weight: 600;
+    font-weight: 200;
     font-size: 25px;
 }
 
