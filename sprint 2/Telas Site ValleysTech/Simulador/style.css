@@ -263,4 +263,9 @@ hr {
     justify-content: center;
 }
 
+.texto_erro {
+    display: flex;
+    justify-content: center;
+    color: red;
+}
 
