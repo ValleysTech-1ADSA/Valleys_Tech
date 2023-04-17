@@ -51,6 +51,9 @@ body {
     height: 45px;
 }
 
+.sidebar a :hover{
+}
+
 .container .dashboard {
     position: relative;
     top: 30px;
@@ -58,7 +61,7 @@ body {
     display: flex;
     flex-direction: column;
     width: 900px;
-    height: 200px;
+    height: 300px;
 }
 
 .container .dashboard h1 {
@@ -75,6 +78,15 @@ body {
 .container #myChart {
     position: relative;
     width: 500px;
+    right: 275px;
+    bottom: 20px;
+    
+}
+
+.container #myChart2 {
+    position: relative;
+    bottom: 20px;
+    right: 200px;
     
 }
 
@@ -83,6 +95,7 @@ body {
     position: relative;
     top: 320px;
     left: 80px;
-    height: 200px;
+    height: 270px;
+    width: 700px;
 }
 

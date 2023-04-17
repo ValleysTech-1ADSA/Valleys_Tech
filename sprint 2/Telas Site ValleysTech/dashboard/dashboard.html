@@ -14,13 +14,11 @@
     <div class="container">
 
         <div class="sidebar">
-
-            
-            <img id="arrow" src="images/arrow1.png" alt="">
-            <img class="acoes" src="images/map.png" alt="">
-            <img class="acoes" src="images/rainfall.png" alt="">
-            <img class="acoes" src="images/thermometer.png" alt="">
-            <img class="acoes" src="images/healthyGrape.png" alt="">
+            <a href="#"><img id="arrow" src="images/arrow1.png" alt=""></a>
+            <a href="#"><img class="acoes" src="images/map.png" alt=""></a>
+            <a href="#"><img class="acoes" src="images/rainfall.png" alt=""></a>
+            <a href="#"><img class="acoes" src="images/thermometer.png" alt=""></a>
+            <a href="#"><img class="acoes" src="images/healthyGrape.png" alt=""></a>
 
         
         </div>
@@ -38,16 +36,17 @@
         <div class="navbar">
 
             <ul>
-                <img id="search" src="images/icon_pesquisa.png" alt="">
+                <a href="#"><img id="search" src="images/icon_pesquisa.png" alt="">
+                </ul></a>
+            <ul>
+                <a href="#"><img class="alert" src="images/icon_alerta.png" alt=""></a>
             </ul>
             <ul>
-                <img class="alert" src="images/icon_alerta.png" alt="">
+                <a href="#"><img class="alert" src="images/icon_notificacao.png" alt=""></a>
             </ul>
             <ul>
-                <img class="alert" src="images/icon_notificacao.png" alt="">
-            </ul>
-            <ul>
-                <img id="profilePic" src="images/profilePic.png" alt="">
+                <a href="#"><img id="profilePic" src="images/profilePic.png" alt=""></a>
+                <a href="#">Sair</a>
             </ul>
     
         </div>
@@ -72,11 +71,15 @@
         datasets: [{
           label: 'Temperatura média',
           data: [22, 19, 23, 25, 22, 23],
+          borderColor: '#FF6384',
+          backgroundColor: '#F81A42',
           borderWidth: 1
         },
         {
           label: 'Umidade média',
           data: [91, 89, 83, 85, 72, 79],
+          borderColor: '#6392ff',
+          backgroundColor: '#6392ff',
           borderWidth: 1
         }]
       },
@@ -96,11 +99,15 @@
         datasets: [{
           label: 'Temperatura',
           data: [22, 19, 23, 25, 22, 23],
+          borderColor: '#FF6384',
+          backgroundColor: '#F81A42',
           borderWidth: 1
         },
         {
           label: 'Umidade',
           data: [91, 89, 83, 85, 72, 79],
+          borderColor: '#6392ff',
+          backgroundColor: '#6392ff',
           borderWidth: 1
         }]
       },
