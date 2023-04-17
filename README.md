@@ -9,13 +9,13 @@
 
 <p align="center">
 
-• Reuniões serão sempre iniciadas às terça-feiras às 20:00.
+• Reuniões acontecerão remotamente as terça-feiras às 20:00.
 
 • Perante a necessidade de tempo, será discutida se há demanda de uma reunião ao sábado da respectiva semana. Neste mesmo debate será definido o horário de encontro.
 
-• Após cada reunião, será registrado o conteúdo discutido e definido com os integrantes presentes na reunião (esclarecimentos, direcionamentos, eventuais dúvidas e   retrospectiva da visão geral do projeto).
+• Após cada reunião, será registrado o conteúdo discutido e definido com os integrantes presentes na reunião (esclarecimentos, direcionamentos, eventuais dúvidas e retrospectiva da visão geral do projeto).
 
-• Todos requisitos serão desenvolvidos por duplas, exemplo: Numa demanda de uma tela de login, serão elegidas duplas, cada dupla atenderá ao serviço e nas reuniões subsequentes será eleito o trabalho definitivo pelo grupo e discutida melhorias no código desenvolvido. As duplas serão rotativas, baseadas em dificuldades perante o conteúdo exigido, sendo um integrante com mais facilidade no conteúdo e outro com mais dificuldade.
+• Todos requisitos serão desenvolvidos por duplas, exemplo: Em uma demanda de uma tela de login, serão elegidas duplas, cada dupla atenderá ao serviço e nas reuniões subsequentes será eleito o trabalho definitivo pelo grupo e discutida melhorias no código desenvolvido. As duplas serão rotativas, baseadas em dificuldades perante o conteúdo exigido, sendo um integrante com mais facilidade no conteúdo e outro com mais dificuldade.
 
 • As atas serão registradas em cada tarefa do status de “Reuniões“ do Trello.
 
