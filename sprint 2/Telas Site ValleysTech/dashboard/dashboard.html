@@ -24,14 +24,46 @@
         </div>
 
         <div class="dashboard">
-            <h1 class="text">Bom dia #Usuário#!</h1>
+            <h1 class="text">Bom dia, Vitor!</h1><br>
             <h2 class="text">Verifique as principais atualizações desta manhã</h2>
-
+            
         </div>
+        <div class="tabela ">
+          <table class="tabela-temperatura" border="1">
+          <tr>
+            <td colspan="6">Temperatura</td>
+
+          </tr>
+          <tr>
+            <td class="tr tr-critico">22</td>
+            <td class="tr tr-alerta">23,50</td>
+            <td class="tr-saudavel">24</td>
+            <td class="tr-saudavel">27</td>
+            <td class="tr-alerta">28,50</td>
+            <td class="tr-critico">30</td>
+          </tr>
+        </table>
+        <table class="tabela-umidade" border="1">
+          <tr>
+            <td colspan="6">Umidade</td>
+
+          </tr>
+          <tr>
+            <td class="tr-critico">50</td>
+            <td class="tr-alerta">57,50</td>
+            <td class="tr-saudavel">58</td>
+            <td class="tr-saudavel">65</td>
+            <td class="tr-alerta">72,50</td>
+            <td class="tr-critico">80</td>
+          </tr>
+        </table>
+      </div>
         <div class="chartJs">
             <canvas id="myChart"></canvas>
             <canvas id="myChart2"></canvas>
         </div>
+
+        
 
         <div class="navbar">
 
@@ -67,10 +99,10 @@
     new Chart(ctx, {
       type: 'bar',
       data: {
-        labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho'],
+        labels: ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab'],
         datasets: [{
           label: 'Temperatura média',
-          data: [22, 19, 23, 25, 22, 23],
+          data: [22, 19, 23, 25, 22, 23, ],
           borderColor: '#FF6384',
           backgroundColor: '#F81A42',
           borderWidth: 1
@@ -85,6 +117,21 @@
       },
       options: {
         scales: {
+          x: {
+        display: true,
+        title: {
+          display: true,
+          text: 'Média semanal',
+          color: '#F81A42',
+          font: {
+            family: 'Montserrat',
+            size: 20,
+            weight: 'bold',
+            lineHeight: 1.2,
+          },
+          padding: {top: 20, left: 0, right: 0, bottom: 0}
+        }
+      },
           y: {
             beginAtZero: true
           }
@@ -113,6 +160,21 @@
       },
       options: {
         scales: {
+          x: {
+        display: true,
+        title: {
+          display: true,
+          text: 'Últimas 6 horas',
+          color: '#F81A42',
+          font: {
+            family: 'Montserrat',
+            size: 20,
+            weight: 'bold',
+            lineHeight: 1.2,
+          },
+          padding: {top: 20, left: 0, right: 0, bottom: 0}
+        }
+      },
           y: {
             beginAtZero: true
           }
