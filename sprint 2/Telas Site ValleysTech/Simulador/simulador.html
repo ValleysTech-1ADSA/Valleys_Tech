@@ -22,7 +22,7 @@
             </ul>
             <ul class="nav-ul">
                 <li class="list-ul li-hover"><a href="../login-registro/registro.html">CADASTRO</a></li>
-                <li class="list-ul li-hover"><a href="../login/Login.html">LOGIN</a></li>
+                <li class="list-ul li-hover"><a href="../login-registro/Login.html">LOGIN</a></li>
             </ul>
         </nav>
     </header>
@@ -62,14 +62,14 @@
                     Quantidade de uvas produzidas por semana (kg): <br> <input id="input_quantidade">
                 </div>
                 <div class="inputs">
-                    Valor de venda do produto por quilo: <br> <input id="input_valor_venda">
+                    <span>Valor de venda do produto por quilo:</span> <br> <input id="input_valor_venda">
                 </div>
                 <div id="erro_valor" class="texto_erro">
                 </div>
+                
                 <div class="div_botao">
                     <button id="botao-simular" onclick="calcular()">Simular</button>
                 </div>
-            </div>
         </div>
     </section>
     <footer class="footer">
@@ -143,7 +143,7 @@
             mostrar_popup()
 
         } else {
-            texto_erro.innerHTML = `<span class="texto_erro">Insira um valor valido!</span>`
+            erro_valor.innerHTML = `<span class="texto_erro">Insira um valor válido!</span>`
         }
     }
 

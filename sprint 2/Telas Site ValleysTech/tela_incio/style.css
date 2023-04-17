@@ -16,6 +16,11 @@ a {
     font-family: 'Montserrat', sans-serif;
     font-weight: 200;
 }
+
+.list-nav a:hover {
+    border-bottom: 1px solid white;
+}
+
 .container {
     display: flex;
     background-color: #F81A42;
