@@ -76,6 +76,10 @@ a {
     font-weight: 100;
 }
 
+.agora {
+    border-bottom: 0.5px solid white;
+}
+
 .container-right .container-right-txt  {
     margin-left: 40px;
     display: flex;

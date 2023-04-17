@@ -42,6 +42,10 @@
     border-bottom: 1px solid white;
 }
 
+.agora {
+    border-bottom: 0.5px solid white;
+}
+
 .navegation .nav-ul .list-logo{
     height: 60px;
     
