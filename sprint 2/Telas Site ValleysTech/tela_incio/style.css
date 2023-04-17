@@ -97,6 +97,7 @@ a {
 
 .logo-center {
     width: 120px;
+    margin-right: 19px;
 }
 
 .fundo_branco {
@@ -162,7 +163,7 @@ a {
 .div_hr {
     padding-left: 130px;
     padding-right: 130px;
-    padding-top: 15px;
+    padding-top: 55px;
 }
 
 .fundo_branco2 .mid_pt2 {
