@@ -71,6 +71,10 @@ a {
     font-weight: 100;
 }
 
+.nav-list li a:hover {
+    border-bottom: 1px solid white;
+}
+
 .container-right .container-right-txt  {
     margin-left: 40px;
     display: flex;
