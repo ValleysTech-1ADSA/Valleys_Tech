@@ -19,13 +19,36 @@ a {
 .container {
     display: flex;
     background-color: #F81A42;
+    height: 663.4px;
     flex-direction: row;
 }
 
+@keyframes jumpInfinite {
+    0% {
+        margin-top: 0;
+    }
+    50% {
+        margin-top: 10px;
+    }
+    100% {
+        margin-top: 0;
+    }
+    
+}
+
+.div_seta {
+    position: absolute;
+    display: flex;
+    top: 590px;
+    left: 625px;
+    width: 100px;
+    height: 100px;
+    animation: jumpInfinite 1.5s infinite;
+}
 
 .container-left {
     width: 50vw;
-    height: 625px;
+    height: 664px;
    
 }
 
@@ -71,6 +94,10 @@ a {
     font-weight: 100;
 }
 
+.nav-list li a:hover {
+    border-bottom: 1px solid white;
+}
+
 .container-right .container-right-txt  {
     margin-left: 40px;
     display: flex;
@@ -97,6 +124,7 @@ a {
 
 .logo-center {
     width: 120px;
+    margin-right: 19px;
 }
 
 .fundo_branco {
@@ -165,7 +193,7 @@ a {
 .div_hr {
     padding-left: 130px;
     padding-right: 130px;
-    padding-top: 15px;
+    padding-top: 55px;
 }
 
 .fundo_branco2 .mid_pt2 {
@@ -337,4 +365,10 @@ a {
 section {
     margin-left: 50px;
     font-family: 'Montserrat', serif;
+}
+
+.footer .section .contato{
+    position: relative;
+    text-align: center;
+    right: 500px;
 }
