@@ -58,9 +58,10 @@
         </div>
         <hr>
         <div class="calculo">
+            <h1>Informe os dados da sua produção:</h1>
             <div class="div_inputs">
                 <div class="inputs">
-                    Quantidade de uvas produzidas por semana (kg): <br> <input id="input_quantidade">
+                     <p>Quantidade de uvas produzidas por semana (kg):</p> <br> <input id="input_quantidade">
                 </div>
                 <div class="inputs">
                     <span>Valor de venda do produto por quilo:</span> <br> <input id="input_valor_venda">
@@ -74,24 +75,40 @@
         </div>
     </section>
     <footer class="footer">
-        <div class="container">
+        <div class="container_rodape">
             <div class="section">
-                <img class="img-footer" src="images/grapeWhite.png" alt="">
+                <img class="img-footer" src="images/grapeWhite 1 (1).png" alt="">
                 <ul>
-                    <li><a href="../tela_incio/index.html">Início</a></li>
+                    <li><a href="index.html">Início</a></li>
                     <li><a href="../login-registro/Login.html">Login</a></li>
                     <li><a href="../Simulador/simulador.html">Simule</a></li>
                     <li><a href="../login-registro/registro.html">Cadastro</a></li>
                     <li><a href="../tela_incio/index.html#sobre_nos">Sobre nós</a></li>
+                    
                 </ul>
+            </div>
+            <div class="contato">
+                <p>Contato</p>
+                
+                <div class="infos">
+                    
+                    
+                    
+                    <ul>
+                        <li><img src="images/phone-call.png" alt="telefone-icon" id="img-footer-telefone">⠀(11) 93463-3525</li>
+                        <li><img src="images/mail-icon-black-free-png.png" alt="mail-icon" id="img-footer-mail">⠀contato@valleystech.com.br</li>
+                    </ul>
+                </div>
+        
             </div>
             <div class="section">
                 <a href="#">
                     <div class="back-top">
-                        <img src="images/Seta-Cima-Png-removebg-preview.png" alt="" class="seta-icon">
+                    <img src="images/Seta-Cima-Png-removebg-preview.png" alt="" class="seta-icon">
                     </div>
                 </a>
             </div>
+            
         </div>
     </footer>
     <div class="popup disable" id="popup_sim">
@@ -133,7 +150,7 @@
 
 
 
-        p_resultado.innerHTML = `<p>Sem a Valley's Tech, seus ganhos são de aproximadamente <span>R$${valor_bruto}</span> por semana.<br>
+        p_resultado.innerHTML = `<p>Sem a Valley's Tech, seus ganhos são de <span>R$${valor_bruto}</span> por semana.<br><br>
             Com a Valley's Tech, seus ganhos podem chegar a até <span>R$${valor_vt}</span> por semana.</p><br>
             <p>Por ano esse valor pode chegar a até <span>R$${valor_vt * 52}</span>.<br>
             Podendo reduzir a perda em até <span>R$${(valor_desc * 52) * 0.5} </span> no ano.

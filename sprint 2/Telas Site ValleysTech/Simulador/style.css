@@ -112,11 +112,16 @@ hr {
     margin: 0px;
 }
 
+.calculo h1{
+    text-align: center;
+    margin-top: 50px;
+}
+
 .div_inputs {
     display: flex;
     flex-direction: column;
     gap: 45px;
-    margin-top: 90px;
+    margin-top: 50px;
 }
 
 .inputs {
@@ -165,13 +170,14 @@ hr {
 }
 
 .footer{
+    font-family: 'Montserrat', sans-serif;
     margin-top: 40px;
     height: fit-content;
     background-color: #F81A42;
-    padding: 60px 10%;
+    padding: 60px 10%;; 
 }
 
-.footer .container {
+.footer .container_rodape {
     display: flex;
     justify-content: space-between;
 }
@@ -213,6 +219,38 @@ hr {
     text-align: center;
 }
 
+section {
+    margin-left: 50px;
+    font-family: 'Montserrat', serif;
+}
+
+.footer .container_rodape .contato{
+    color: #FFFFFF;
+}
+.footer .container_rodape .contato p{
+    margin-bottom: 10px;
+}
+.footer .container_rodape .contato .infos{
+    display: flex;
+    align-items: center;
+}
+
+.footer .container_rodape .contato .infos li{
+    display: flex;
+    align-items: center;
+}
+
+.footer .container_rodape .contato #img-footer-telefone{
+    height: 25px;
+    margin-bottom: 10px;
+
+}
+.footer .container_rodape .contato #img-footer-mail{
+    height: 20px;
+
+    
+}
+
 .popup {
     background-color: rgb(0,0,0,0.5);
     position:fixed;
@@ -230,8 +268,9 @@ hr {
 }
 
 .conteudo-popup {
+    text-align: center;
     width: 600px;
-    height: 500px;
+    height: fit-content;
     background-color: white;
     border-radius: 15px;
     border: 0.5px solid #f81a42;
@@ -255,7 +294,7 @@ hr {
 }
 .titulo-popup {
     text-align: center;
-    margin-top: 55px;
+    margin-top: 30px;
 }
 #p_resultado span {
     color: #f81a42;
@@ -263,7 +302,7 @@ hr {
 }
 .imagem_popup img {
     height: 150px;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 .imagem_popup {
     display: flex;
@@ -276,5 +315,6 @@ hr {
     color: red;
     position: relative;
     bottom: 20px;
+    margin-top: 10px;
 }
 

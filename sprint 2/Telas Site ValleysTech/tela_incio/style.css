@@ -10,6 +10,7 @@
     margin: 0;
     font-family: sans-serif;
 }   
+
 a {
     text-decoration: none;
     color: white;
@@ -21,6 +22,7 @@ a {
     background-color: #F81A42;
     height: 663.4px;
     flex-direction: row;
+    justify-content: center;
 }
 
 @keyframes jumpInfinite {
@@ -40,7 +42,7 @@ a {
     position: absolute;
     display: flex;
     top: 590px;
-    left: 625px;
+
     width: 100px;
     height: 100px;
     animation: jumpInfinite 1.5s infinite;
@@ -297,13 +299,13 @@ a {
 .mid_txt3 {
     display: flex;
     width: 49%;
-    height: 100%;
+    height: fit-content;
 }
 
 .mid_txt4 {
     display: flex;
     width: 49%;
-    height: 100%;
+    height: fit-content;
 }
 
 .linha {
@@ -317,7 +319,7 @@ a {
     height: fit-content;
     background-color: #F81A42;
     padding: 60px 10%;; 
-    
+    margin-top: 100px;
 }
 
 .footer .container_rodape {
@@ -367,8 +369,29 @@ section {
     font-family: 'Montserrat', serif;
 }
 
-.footer .section .contato{
-    position: relative;
-    text-align: center;
-    right: 500px;
+.footer .container_rodape .contato{
+    color: #FFFFFF;
+}
+.footer .container_rodape .contato p{
+    margin-bottom: 10px;
+}
+.footer .container_rodape .contato .infos{
+    display: flex;
+    align-items: center;
+}
+
+.footer .container_rodape .contato .infos li{
+    display: flex;
+    align-items: center;
+}
+
+.footer .container_rodape .contato #img-footer-telefone{
+    height: 25px;
+    margin-bottom: 10px;
+
+}
+.footer .container_rodape .contato #img-footer-mail{
+    height: 20px;
+
+    
 }

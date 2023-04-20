@@ -186,13 +186,16 @@
     cursor: pointer;
   }
 
-.footer{
+  .footer{
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 40px;
     height: fit-content;
     background-color: #F81A42;
-    padding: 60px 10%;;
+    padding: 60px 10%;; 
+    margin-top: 80px;
 }
 
-.footer .container {
+.footer .container_rodape {
     display: flex;
     justify-content: space-between;
 }
@@ -232,4 +235,36 @@
 .footer .section .back-top .seta-icon{
     height: 25%;
     text-align: center;
+}
+
+section {
+    margin-left: 50px;
+    font-family: 'Montserrat', serif;
+}
+
+.footer .container_rodape .contato{
+    color: #FFFFFF;
+}
+.footer .container_rodape .contato p{
+    margin-bottom: 10px;
+}
+.footer .container_rodape .contato .infos{
+    display: flex;
+    align-items: center;
+}
+
+.footer .container_rodape .contato .infos li{
+    display: flex;
+    align-items: center;
+}
+
+.footer .container_rodape .contato #img-footer-telefone{
+    height: 25px;
+    margin-bottom: 10px;
+
+}
+.footer .container_rodape .contato #img-footer-mail{
+    height: 20px;
+
+    
 }

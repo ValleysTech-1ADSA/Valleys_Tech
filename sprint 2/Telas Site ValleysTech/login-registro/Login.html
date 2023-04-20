@@ -34,10 +34,10 @@
                 <div class="container-form">
                     <form action="GET" class="form">
                         <label for="email">Email</label>
-                        <input class="input-text" type="email" id="email">
+                        <input class="input-text" type="email" id="inputEmail">
                         <br>
                         <label for="senha">Senha</label>
-                        <input class="input-text" type="password" id="senha">
+                        <input class="input-text" type="password" id="inputSenha">
                     </form>
                     <div class="login-options">
                         <div class="remember-login"><input type="checkbox" class="checkbox">
@@ -48,7 +48,7 @@
                         </div>
                     </div>
                     <div class="buttons-form">
-                        <button class="button button-login">Entrar</button>
+                        <button class="button button-login" onclick="entrar()">Entrar</button>
                         <p>Não possui uma conta?</p>
                         <button class="button button-cadastrar">Cadastrar</button>
                     </div>
@@ -57,16 +57,31 @@
         </main>
     </section>
     <footer class="footer">
-        <div class="container">
+        <div class="container_rodape">
             <div class="section">
-                <img class="img-footer" src="images/grapeWhite.png" alt="">
+                <img class="img-footer" src="images/grapeWhite 1 (1).png" alt="">
                 <ul>
-                    <li><a href="../tela_incio/index.html">Início</a></li>
+                    <li><a href="index.html">Início</a></li>
                     <li><a href="../login-registro/Login.html">Login</a></li>
                     <li><a href="../Simulador/simulador.html">Simule</a></li>
-                    <li><a href="../login-registro/registro.html">Cadastro</a></li>            
+                    <li><a href="../login-registro/registro.html">Cadastro</a></li>
                     <li><a href="../tela_incio/index.html#sobre_nos">Sobre nós</a></li>
+                    
                 </ul>
+            </div>
+            <div class="contato">
+                <p>Contato</p>
+                
+                <div class="infos">
+                    
+                    
+                    
+                    <ul>
+                        <li><img src="images/phone-call.png" alt="telefone-icon" id="img-footer-telefone">⠀(11) 93463-3525</li>
+                        <li><img src="images/mail-icon-black-free-png.png" alt="mail-icon" id="img-footer-mail">⠀contato@valleystech.com.br</li>
+                    </ul>
+                </div>
+        
             </div>
             <div class="section">
                 <a href="#">
@@ -75,7 +90,20 @@
                     </div>
                 </a>
             </div>
+            
         </div>
     </footer>
 </body>
 </html>
+
+<script>
+
+    function entrar(){
+        var login = inputEmail.value
+        var senha = inputSenha.value
+        if(login == 'admin' && senha == 'admin'){
+            window.location.href = "../dashboard/dashboard.html"
+        }
+    }
+
+</script>
