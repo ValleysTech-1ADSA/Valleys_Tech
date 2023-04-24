@@ -68,7 +68,7 @@ body {
 
 .container .box-right .status h3 {
     position: relative;
-    left: 25px;
+    left: 35px;
     font-family: 'Montserrat', sans-serif;
     
 }
@@ -76,7 +76,7 @@ body {
 
 .container .box-right .status p {
     position: relative;
-    left: 25px;
+    left: 35px;
     bottom: 15px;
     font-family: 'Montserrat', sans-serif;
     
