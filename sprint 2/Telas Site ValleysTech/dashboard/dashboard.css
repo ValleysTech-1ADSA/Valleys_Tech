@@ -67,12 +67,16 @@ body {
 }
 
 .container .box-right .status h3 {
+    position: relative;
+    left: 25px;
     font-family: 'Montserrat', sans-serif;
     
 }
 
+
 .container .box-right .status p {
     position: relative;
+    left: 25px;
     bottom: 15px;
     font-family: 'Montserrat', sans-serif;
     
