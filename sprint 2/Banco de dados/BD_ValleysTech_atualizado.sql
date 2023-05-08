@@ -24,6 +24,8 @@ email varchar(65),
 senha varchar(45),
 status_funcionario varchar(15),
 fkEmpresa int,
+fkTipo_usuario int,
+constraint fkTipo_usuario foreign key (fkTipo_usuario) references tipo_usuario(idTipo_usuario),
 constraint fkEmpresa foreign key (fkEmpresa) references empresa(idEmpresa),
 constraint pkUsuario primary key (idUsuario, fkEmpresa)
 );
@@ -76,3 +78,42 @@ fkSensor int,
 constraint fkSensor foreign key (fkSensor) references sensor(idSensor),
 constraint pkLeitura primary key (idLeitura, fksensor)
 );
+
+INSERT INTO empresa VALUES
+	(null, 'viticultura', 'Valleys Tec', '56330862000137'),
+	(null, 'viticultura', 'Gerudo Uvas', '56334462000137'),
+	(null, 'viticultura', 'Kakariko Village', '92450862000137');
+
+
+INSERT INTO usuario VALUES 
+(null, 'Wanda', 'Maximoff', '35131534791', '14-989719697', 'wanda.maximoff@email.com', 'wanda123', 'ativo', 1, 1),
+(null, 'Lucas', 'Vinicius', '24231534745', '11-129719456', 'lucas.vinicius@email.com', 'Luquinhas000', 'ativo', 2, 3),
+(null, 'Vitoria', 'Dias', '35131534722', '55-959719753', 'vitoria.dias@email.com', 'Victory1212', 'ativo', 3, 2),
+(null, 'Caue', 'Zigmmount', '87531534931', '12-989719697', 'caue.zigmmount@email.com', 'Coelho1992', 'ativo', 2, 4);
+
+INSERT INTO tipo_usuario VALUES
+(null, 'CEO'),
+(null, 'diretor-geral'),
+(null, 'diretor de produção'),
+(null, 'auxiliar de viticultura');
+
+INSERT INTO local_empresa VALUES 
+(null, 'hectar 1', 1),
+(null, 'hectar 2', 1),
+(null, 'hectar 3', 1),
+(null, 'hectar 4', 1),
+(null, 'hectar 5', 1);
+
+INSERT INTO local_empresa VALUES
+(null, 'hectar 1', 2),
+(null, 'hectar 2', 2),
+(null, 'hectar 3', 2),
+(null, 'hectar 4', 2),
+(null, 'hectar 5', 2);
+
+INSERT INTO local_empresa VALUES
+(null, 'hectar 1', 3),
+(null, 'hectar 2', 3),
+(null, 'hectar 3', 3),
+(null, 'hectar 4', 3),
+(null, 'hectar 5', 3);
