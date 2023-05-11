@@ -37,36 +37,33 @@ fkEmpresa int,
 constraint fkEmpresa2 foreign key (fkEmpresa) references empresa(idEmpresa)
 );
 
+CREATE TABLE local_associativa (
+idAssociativa int auto_increment,
+fkLocal int,
+fkEndereco int,
+numero int,
+complemento varchar (60),
+constraint fkLocal foreign key (fkLocal) references local_empresa (idLocal),
+constraint fkEndereco foreign key (fkEndereco) references endereco (idEndereco),
+constraint pkAssocitiva primary key (idAssociativa, fkLocal, fkEndereco)
+);
+
 CREATE TABLE endereco (
 idEndereco int primary key auto_increment,
 cep char(9),
 bairro varchar(50),
 estado char(2),
 cidade varchar(50),
-rua varchar(50),
-numero varchar(10),
-fkLocal int,
-constraint fkLocal foreign key (fkLocal) references local_empresa(idLocal)
-);
-
-CREATE TABLE tipo_sensor (
-idTipo_sensor int primary key auto_increment,
-tipo_leitura1 varchar(45),
-tipo_leitura2 varchar(45),
-unidade_medida1 varchar(45),
-unidade_medida2 varchar(45),
-modelo varchar(45)
+rua varchar(50)	
 );
 
 CREATE TABLE sensor (
 idSensor int primary key auto_increment,
 status_sensor varchar(15),
-fkEmpresa int,
+unidade_medida varchar (45),
+modelo varchar (45),
 fkLocal int,
-fkTipo_sensor int,
-constraint fkEmpresa3 foreign key (fkEmpresa) references empresa(idEmpresa), 
-constraint fkLocal2 foreign key (fkLocal) references local_empresa(idLocal),
-constraint fkTipo foreign key (fkTipo_sensor) references tipo_sensor(idTipo_sensor)
+constraint fkLocal2 foreign key (fkLocal) references local_empresa(idLocal)
 );
 
 CREATE TABLE leitura_sensor (
@@ -78,6 +75,9 @@ fkSensor int,
 constraint fkSensor foreign key (fkSensor) references sensor(idSensor),
 constraint pkLeitura primary key (idLeitura, fksensor)
 );
+
+
+desc 
 
 INSERT INTO empresa VALUES
 	(null, 'viticultura', 'Valleys Tec', '56330862000137'),
@@ -117,3 +117,4 @@ INSERT INTO local_empresa VALUES
 (null, 'hectar 3', 3),
 (null, 'hectar 4', 3),
 (null, 'hectar 5', 3);
+
