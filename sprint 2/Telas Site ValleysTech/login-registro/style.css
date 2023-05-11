@@ -89,6 +89,10 @@
     height: 80px;
 
 }
+.container-form {
+    display: flex;
+    justify-content: space-evenly;
+}
 
 .section-banner .container .login-form{
     height: fit-content;
