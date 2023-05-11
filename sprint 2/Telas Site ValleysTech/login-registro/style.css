@@ -90,8 +90,9 @@
 
 }
 .container-form {
+    width: 90vw;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 
 .section-banner .container .login-form{
@@ -102,6 +103,12 @@
 }
 
 .section-banner .container .login-form .form{
+    width:fit-content;
+    display: flex;
+    flex-direction: column;
+}
+
+.section-banner .container .login-form .form2{
     width:fit-content;
     display: flex;
     flex-direction: column;
