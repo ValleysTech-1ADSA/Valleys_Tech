@@ -94,6 +94,9 @@
     display: flex;
     justify-content: space-around;
 }
+.container-formLogin {
+    display: block  ;
+}
 
 .section-banner .container .login-form{
     height: fit-content;
