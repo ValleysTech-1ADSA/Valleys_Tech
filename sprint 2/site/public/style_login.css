@@ -94,6 +94,16 @@
     display: flex;
     justify-content: space-around;
 }
+.container-form-login{
+    width: 90vw;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.form-login{
+    justify-content: center;
+    
+}
 
 .section-banner .container .login-form{
     height: fit-content;

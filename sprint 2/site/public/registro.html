@@ -2,25 +2,25 @@
 <html lang="en">
 <head>
 
-    <script src="/site/public/js/funcoes.js"></script>
+    <script src="/js/funcoes.js"></script>
 
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="images/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style_login.css">
+    <link rel="icon" href="images_login_registro/icon.png" type="image/x-icon">
 </head>
 <body>
     <header class="header-top">
         <nav class="navegation">
             <ul class="nav-ul">
-                <li class="list-ul"><a href="../Simulador/simulador.html">SIMULE</a></li>
-                <li class="list-ul"><a href="../tela_incio/index.html#sobre_nos">SOBRE NÓS</a></li>
+                <li class="list-ul"><a href="simulador.html">SIMULE</a></li>
+                <li class="list-ul"><a href="index.html#sobre_nos">SOBRE NÓS</a></li>
             </ul>
             <ul class="nav-ul">
-                <li class="list-ul"><a href="../tela_incio/index.html"><img src="images/grapeWhite.png" alt="LOGO" class="list-logo"></a></li>
+                <li class="list-ul"><a href="index.html"><img src="images_login_registro/grapeWhite.png" alt="LOGO" class="list-logo"></a></li>
             </ul>
             <ul class="nav-ul">
                 <li class="agora list-ul"><a href="#">CADASTRO</a></li>
@@ -32,33 +32,33 @@
         <main class="container">
             <div class="img-banner">
                 <h1>Cadastro</h1>
-                <img src="images/logoBlackFont.png" alt="">
+                <img src="images_login_registro/logoBlackFont.png" alt="">
             </div>
             <div class="login-form">
                 <div class="container-form">
-                    <form action="GET" class="form">
+                    <form class="form">
                         <label for="nome">Nome</label>
-                        <input class="input-text" type="text" id="nome">
+                        <input class="input-text" type="text" id="nome" name="nomeServer">
                         <br>
                         <label for="sobrenome">Sobrenome</label>
-                        <input class="input-text" type="text" id="sobrenome">
+                        <input class="input-text" type="text" id="sobrenome" name="sobrenomeServer">
                         <br>
                         <label for="cpf">CPF</label>
-                        <input class="input-text" type="number" id="cpf">
+                        <input class="input-text" type="number" id="cpf" name="cpfServer">
                         <br>
                         <label for="celular">Celular</label>
-                        <input class="input-text" type="text" id="celular">
+                        <input class="input-text" type="text" id="celular" name="celularServer">
                         <br>
                         <label for="email">Email</label>
-                        <input class="input-text" type="email" id="email">
+                        <input class="input-text" type="email" id="email" name="emailServer">
                         <br>
                         <label for="senha">Senha</label>
-                        <input class="input-text" type="password" id="senha">
+                        <input class="input-text" type="password" id="senha" name="senhaServer">
                         <br>
                         <label for="confirmarSenha">Confirmar senha</label>
-                        <input class="input-text" type="password" id="confirmarSenha">
+                        <input class="input-text" type="password" id="confirmarSenha" >
                     </form>
-                    <form action="GET" class="form2">
+                    <form class="form2">
                         <label for="razaoSocial">Razão Social</label>
                         <input class="input-text" type="text" id="nomeEmpresa">
                         <br>
@@ -80,13 +80,13 @@
     <footer class="footer">
         <div class="container_rodape">
             <div class="section">
-                <img class="img-footer" src="images/grapeWhite 1 (1).png" alt="">
+                <img class="img-footer" src="images_login_registro/grapeWhite 1 (1).png" alt="">
                 <ul>
                     <li><a href="index.html">Início</a></li>
-                    <li><a href="../login-registro/Login.html">Login</a></li>
-                    <li><a href="../Simulador/simulador.html">Simule</a></li>
-                    <li><a href="../login-registro/registro.html">Cadastro</a></li>
-                    <li><a href="../tela_incio/index.html#sobre_nos">Sobre nós</a></li>
+                    <li><a href="Login.html">Login</a></li>
+                    <li><a href="simulador.html">Simule</a></li>
+                    <li><a href="registro.html">Cadastro</a></li>
+                    <li><a href="index.html#sobre_nos">Sobre nós</a></li>
                     
                 </ul>
             </div>
@@ -95,8 +95,8 @@
                 
                 <div class="infos">                                        
                     <ul>
-                        <li><img src="images/phone-call.png" alt="telefone-icon" id="img-footer-telefone">(11) 93463-3525</li>
-                        <li><img src="images/mail-icon-black-free-png.png" alt="mail-icon" id="img-footer-mail">contato@valleystech.com.br</li>
+                        <li><img src="images_login_registro/phone-call.png" alt="telefone-icon" id="img-footer-telefone">(11) 93463-3525</li>
+                        <li><img src="images_login_registro/mail-icon-black-free-png.png" alt="mail-icon" id="img-footer-mail">contato@valleystech.com.br</li>
                     </ul>
                 </div>
         
@@ -104,7 +104,7 @@
             <div class="section">
                 <a href="#">
                     <div class="back-top">
-                    <img src="images/Seta-Cima-Png-removebg-preview.png" alt="" class="seta-icon">
+                    <img src="images_login_registro/Seta-Cima-Png-removebg-preview.png" alt="" class="seta-icon">
                     </div>
                 </a>
             </div>

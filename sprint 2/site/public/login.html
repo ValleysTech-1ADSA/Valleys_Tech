@@ -1,162 +1,109 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>AquaTech | Login</title>
-
-    <script src="./js/funcoes.js"></script>
-
-    <link rel="icon" href="./assets/icon/favicon2.ico">
-    <link rel="stylesheet" href="./css/estilo.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+    <title>Login</title>
+    <link rel="stylesheet" href="style_login.css">
+    <link rel="icon" href="images_login_registro/icon.png" type="image/x-icon">
 </head>
-
 <body>
-
-    <!--Header-->
-
-    <div class="header">
-        <div class="container">
-            <h1 class="titulo">AquaTech</h1>
-            <ul class="navbar">
-                <li>
-                    <a href="index.html">Inicial</a>
-                </li>
-                <li>
-                    <a href="simulador.html">Simulador</a>
-                </li>
-                <li>|</li>
-                <li class="agora">
-                    <a href="#">Login</a>
-                </li>
-                <li>
-                    <a href="cadastro.html">Cadastro</a>
-                </li>
+    <header class="header-top">
+        <nav class="navegation">
+            <ul class="nav-ul">
+                <li class="list-ul"><a href="simulador.html">SIMULE</a></li>
+                <li class="list-ul"><a href="index.html#sobre_nos">SOBRE NÓS</a></li>
             </ul>
-        </div>
-    </div>
-
-
-    <div class="login">
-        <div class="alerta_erro">
-            <div class="card_erro" id="cardErro">
-                <span id="mensagem_erro"></span>
+            <ul class="nav-ul">
+                <li class="list-ul"><a href="index.html"><img src="images_login_registro/grapeWhite.png" alt="LOGO" class="list-logo"></a></li>
+            </ul>
+            <ul class="nav-ul">
+                <li class="list-ul"><a href="registro.html">CADASTRO</a></li>
+                <li class="agora list-ul"><a href="Login.html">LOGIN</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="section-banner">
+        <main class="container">
+            <div class="img-banner">
+                <h1>Login</h1>
+                <img src="images_login_registro/logoBlackFont.png" alt="">
             </div>
-        </div>
-        <div class="container">
-            <div class="card card-login">
-                <h2>Olá de volta!</h2>
-                <div class="formulario">
-                    <div class="campo">
-                        <span>E-mail:</span>
-                        <input id="email_input" type="text" placeholder="Login">
+            <div class="login-form">
+                <div class="container-form-login">
+                    <form class="form-login">
+                        <label for="email">Email</label>
+                        <input class="input-text" type="email" id="inputEmail">
+                        <br>
+                        <label for="senha">Senha</label>
+                        <input class="input-text" type="password" id="inputSenha">
+                    </form>
+                    <div class="login-options">
+                        <div class="remember-login"><input type="checkbox" class="checkbox">
+                            <p>Lembrar do login</p>
+                        </div>
+                        <div class="forgot">
+                            <p><a href="#">Esqueci a senha</a></p>
+                        </div>
                     </div>
-                    <div class="campo">
-                        <span>Senha:</span>
-                        <input id="senha_input" type="text" placeholder="******">
+                    <div class="buttons-form">
+                        <button class="button button-login" onclick="entrar()">Entrar</button>
+                        <p>Não possui uma conta?</p>
+                        <button class="button button-cadastrar">Cadastrar</button>
                     </div>
-                    <button class="botao" onclick="entrar()">Entrar</button>
                 </div>
-
-                <div id="div_aguardar" class="loading-div">
-                    <img src="./assets/circle-loading.gif" id="loading-gif">
-                </div>
-
-                <div id="div_erros_login"></div>
             </div>
+        </main>
+    </section>
+    <footer class="footer">
+        <div class="container_rodape">
+            <div class="section">
+                <img class="img-footer" src="images_login_registro/grapeWhite 1 (1).png" alt="">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="Login.html">Login</a></li>
+                    <li><a href="simulador.html">Simule</a></li>
+                    <li><a href="registro.html">Cadastro</a></li>
+                    <li><a href="index.html#sobre_nos">Sobre nós</a></li>
+                    
+                </ul>
+            </div>
+            <div class="contato">
+                <p>Contato</p>
+                
+                <div class="infos">
+                    
+                    
+                    
+                    <ul>
+                        <li><img src="images_login_registro/phone-call.png" alt="telefone-icon" id="img-footer-telefone">⠀(11) 93463-3525</li>
+                        <li><img src="images_login_registro/mail-icon-black-free-png.png" alt="mail-icon" id="img-footer-mail">⠀contato@valleystech.com.br</li>
+                    </ul>
+                </div>
+        
+            </div>
+            <div class="section">
+                <a href="#">
+                    <div class="back-top">
+                    <img src="images_login_registro/Seta-Cima-Png-removebg-preview.png" alt="" class="seta-icon">
+                    </div>
+                </a>
+            </div>
+            
         </div>
-    </div>
-
-    <!--footer inicio-->
-    <div class="footer">
-        <div class="container">
-            <h4>Feito com amor por aluno &hearts; SPTech &copy; 2023</h4>
-            <span class="version">v1.0.0</span>
-        </div>
-    </div>
-    <!--footer fim-->
-
+    </footer>
 </body>
-
 </html>
 
 <script>
 
-
-    function entrar() {
-        aguardar();
-
-        var emailVar = email_input.value;
-        var senhaVar = senha_input.value;
-
-        if (emailVar == "" || senhaVar == "") {
-            cardErro.style.display = "block"
-            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
-            finalizarAguardar();
-            return false;
+    function entrar(){
+        var login = inputEmail.value
+        var senha = inputSenha.value
+        if(login == 'admin' && senha == 'admin'){
+            window.location.href = "../dashboard/dashboard.html"
         }
-        else {
-            setInterval(sumirMensagem, 5000)
-        }
-
-        console.log("FORM LOGIN: ", emailVar);
-        console.log("FORM SENHA: ", senhaVar);
-
-        fetch("/usuarios/autenticar", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                emailServer: emailVar,
-                senhaServer: senhaVar
-            })
-        }).then(function (resposta) {
-            console.log("ESTOU NO THEN DO entrar()!")
-
-            if (resposta.ok) {
-                console.log(resposta);
-
-                resposta.json().then(json => {
-                    console.log(json);
-                    console.log(JSON.stringify(json));
-
-                    sessionStorage.EMAIL_USUARIO = json.email;
-                    sessionStorage.NOME_USUARIO = json.nome;
-                    sessionStorage.ID_USUARIO = json.id;
-
-                    setTimeout(function () {
-                        window.location = "./dashboard/cards.html";
-                    }, 1000); // apenas para exibir o loading
-
-                });
-
-            } else {
-
-                console.log("Houve um erro ao tentar realizar o login!");
-
-                resposta.text().then(texto => {
-                    console.error(texto);
-                    finalizarAguardar(texto);
-                });
-            }
-
-        }).catch(function (erro) {
-            console.log(erro);
-        })
-
-        return false;
-    }
-
-    function sumirMensagem() {
-        cardErro.style.display = "none"
     }
 
 </script>
