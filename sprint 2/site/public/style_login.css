@@ -72,7 +72,9 @@
 
 }
 
-
+#form-login {
+    justify-content: center;
+}
 
 .section-banner .container .img-banner{
     justify-content: center;
@@ -94,20 +96,14 @@
     display: flex;
     justify-content: space-around;
 }
-<<<<<<< HEAD:sprint 2/site/public/style_login.css
-.container-form-login{
-    width: 90vw;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
+
 .form-login{
     justify-content: center;
     
-=======
-.container-formLogin {
-    display: block  ;
->>>>>>> 34690e9bc819fe3d46d51731ab0ff7618588ec4c:sprint 2/site/public/login-registro/style.css
+}
+
+#email_input{
+    margin-bottom: 30px;
 }
 
 .section-banner .container .login-form{
