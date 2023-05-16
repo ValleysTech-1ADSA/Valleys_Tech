@@ -57,17 +57,16 @@ function entrar(req, res) {
                 }
             );
     }
-
 }
 
 function cadastrar(req, res) {
     // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
     var nome = req.body.nomeServer;
-    var email = req.body.emailServer;
-    var senha = req.body.senhaServer;
     var sobrenome = req.body.sobrenomeServer;
     var cpf = req.body.cpfServer;
     var celular = req.body.celularServer;
+    var email = req.body.emailServer;
+    var senha = req.body.senhaServer;
 
     // Faça as validações dos valores
     if (nome == undefined) {

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 
-    <script src="/js/funcoes.js"></script>
+    <script src="js/funcoes.js"></script>
 
 
     <meta charset="UTF-8">
@@ -36,29 +36,32 @@
             </div>
             <div class="login-form">
                 <div class="container-form">
-                    <form class="form">
+                    <div class="form">
                         <label for="nome">Nome</label>
-                        <input class="input-text" type="text" id="nome" name="nomeServer">
+                        <input class="input-text" type="text" id="nome" >
                         <br>
                         <label for="sobrenome">Sobrenome</label>
-                        <input class="input-text" type="text" id="sobrenome" name="sobrenomeServer">
+                        <input class="input-text" type="text" id="sobrenome" >
                         <br>
                         <label for="cpf">CPF</label>
-                        <input class="input-text" type="number" id="cpf" name="cpfServer">
+                        <input class="input-text" type="number" id="cpf" >
                         <br>
                         <label for="celular">Celular</label>
-                        <input class="input-text" type="text" id="celular" name="celularServer">
+                        <input class="input-text" type="text" id="celular" >
                         <br>
                         <label for="email">Email</label>
-                        <input class="input-text" type="email" id="email" name="emailServer">
+                        <input class="input-text" type="email" id="email" >
                         <br>
                         <label for="senha">Senha</label>
-                        <input class="input-text" type="password" id="senha" name="senhaServer">
+                        <input class="input-text" type="password" id="senha" >
                         <br>
                         <label for="confirmarSenha">Confirmar senha</label>
                         <input class="input-text" type="password" id="confirmarSenha" >
-                    </form>
-                    <form class="form2">
+                        <div class="buttons-form">
+                            <button class="button button-register" onclick="cadastrar()">Cadastrar</button>
+                        </div>
+                    </div>
+                    <!-- <form class="form2">
                         <label for="razaoSocial">Razão Social</label>
                         <input class="input-text" type="text" id="nomeEmpresa">
                         <br>
@@ -68,10 +71,7 @@
                         <label for="cnpj">CNPJ</label>
                         <input class="input-text" type="number" id="cnpj">
                         <br>
-                        <div class="buttons-form">
-                            <button class="button button-register" onclick="cadastrar()">Cadastrar</button>
-                        </div>
-                    </form>
+                    </form> -->
                     
                 </div>
             </div>
@@ -117,27 +117,27 @@
 <script>
 
     function cadastrar() {
-        aguardar();
-
+        // aguardar();
+        alert('entrei')
         //Recupere o valor da nova input pelo nome do id
         // Agora vá para o método fetch logo abaixo
         var nomeVar = nome.value;
-        var emailVar = email.value;
-        var senhaVar = senha.value;
+        var sobrenomeVar = sobrenome.value;
         var cpfVar = cpf.value;
         var celularVar = celular.value;
-        var sobrenomeVar = sobrenome.value;
+        var emailVar = email.value;
+        var senhaVar = senha.value;
         var confirmacaoSenhaVar = confirmarSenha.value;
 
         if (nomeVar == "" || emailVar == "" || celularVar == "" || senhaVar == "" || confirmacaoSenhaVar == "" || sobrenomeVar == "" || cpfVar == "") {
-            cardErro.style.display = "block"
-            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+            // mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
 
-            finalizarAguardar();
+            // finalizarAguardar();
             return false;
         }
         else {
-            setInterval(sumirMensagem, 5000)
+            // setInterval(sumirMensagem, 5000)
+            alert('entrou no else, tudo correto')
         }
 
         // Enviando o valor da nova input
@@ -150,33 +150,33 @@
                 // crie um atributo que recebe o valor recuperado aqui
                 // Agora vá para o arquivo routes/usuario.js
                 nomeServer: nomeVar,
-                emailServer: emailVar,
-                senhaServer: senhaVar,
+                sobrenomeServer: sobrenomeVar,
                 cpfServer: cpfVar,
                 celularServer: celularVar,
-                sobrenomeServer: sobrenomeVar
+                emailServer: emailVar,
+                senhaServer: senhaVar
             })
         }).then(function (resposta) {
 
             console.log("resposta: ", resposta);
 
             if (resposta.ok) {
-                cardErro.style.display = "block";
+                // cardErro.style.display = "block";
 
-                mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+                // mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
 
                 setTimeout(() => {
                     window.location = "./Login.html";
                 }, "2500")
 
                 limparFormulario();
-                finalizarAguardar();
+                // finalizarAguardar();
             } else {
                 throw ("Houve um erro ao tentar realizar o cadastro!");
             }
         }).catch(function (resposta) {
             console.log(`#ERRO: ${resposta}`);
-            finalizarAguardar();
+            // finalizarAguardar();
         });
 
         return false;

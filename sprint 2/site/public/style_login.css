@@ -94,6 +94,7 @@
     display: flex;
     justify-content: space-around;
 }
+<<<<<<< HEAD:sprint 2/site/public/style_login.css
 .container-form-login{
     width: 90vw;
     align-items: center;
@@ -103,6 +104,10 @@
 .form-login{
     justify-content: center;
     
+=======
+.container-formLogin {
+    display: block  ;
+>>>>>>> 34690e9bc819fe3d46d51731ab0ff7618588ec4c:sprint 2/site/public/login-registro/style.css
 }
 
 .section-banner .container .login-form{
