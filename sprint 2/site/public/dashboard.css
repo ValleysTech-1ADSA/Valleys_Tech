@@ -99,8 +99,14 @@ body {
 
 }
 
+.parametrosPai{
+    display: flex;
+    justify-content: center;
+}
+
 .parametros {
     display: flex;
+    flex-direction: row-reverse;
     justify-content: center;
     background-color: white;
     width: 355px;
@@ -116,7 +122,17 @@ body {
     width: 300px;
     height: 200px;
     border-radius: 15px;
+    margin-right: 5px;
 }
+
+.itensParametros{
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: end;
+}
+    
 
 
 
