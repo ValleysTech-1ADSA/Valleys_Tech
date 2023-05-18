@@ -22,7 +22,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 80%;
+    width: 100vw;
     height: 70px;
     list-style: none;
 }
@@ -70,6 +70,58 @@ body {
     font-weight: 400;
     font-size: 20px;
 }
+
+.chartJs {
+    display: flex;
+    justify-content: center;
+    height: 400px;
+    
+}
+
+.chartJs .graph {
+    width: 650px;
+    
+}
+
+.chartJs .graph canvas {
+    background-color: white;
+    border-radius: 30px;
+    margin: 10px 20px;
+    padding: 5px 10px;
+     
+}
+
+.chartJs .graph h3 {
+    display: flex;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    color: #F81A42;
+
+}
+
+.parametros {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    width: 355px;
+    height: 200px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.parametros2 {
+    display: flex;
+    justify-content: center;
+    background-color: #F81A42;
+    width: 300px;
+    height: 200px;
+    border-radius: 15px;
+}
+
+
+
+
+
 
 
 /*
