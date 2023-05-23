@@ -2,14 +2,12 @@
 <html lang="pt-br">
 
 <head>
-    <link rel="shortcut icon" href="../assets/icon/favicon2.ico" type="image/x-icon">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AquaTech | Tempo Real</title>
+    <title>Valley's Tech | Tempo Real</title>
 
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="dashboards.css">
+    <link rel="stylesheet" href="dashboards2.css">
 
     <script src="../js/funcoes.js"></script>
     <script src="./alerta.js"></script>
@@ -20,21 +18,35 @@
 </head>
 
 <body onload="validarSessao(), atualizacaoPeriodica()">
-
-
+    <header class="header-top">
+        <nav class="navegation">
+            <ul class="nav-ul">
+                <li class="list-ul"><a href="simulador.html">SIMULE</a></li>
+                <li class="list-ul"><a href="index.html#sobre_nos">SOBRE NÓS</a></li>
+            </ul>
+            <ul class="nav-ul">
+                <li class="list-ul"><a href="index.html"><img src="../src/images/images_Card/grapeWhite.png" alt="LOGO" class="list-logo"></a></li>
+            </ul>
+            <ul class="nav-ul">
+                <li class="agora list-ul"><a href="#">CADASTRO</a></li>
+                <li class="list-ul"><a href="Login.html">LOGIN</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="alerta">
+    </div>
+    
     <div class="janela">
 
 
         <div class="header-left dash-header">
 
-            <h1>AquaTech</h1>
+            <img src="../src/images/images_card/grapeWhite.png" alt="" id="logoIcon">
 
-            <div class="hello">
-                <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
-            </div>
+            
 
             <div class="btn-nav">
-                <h3>Aquários</h3>
+                <h3>Hectares</h3>
             </div>
 
             <div class="btn-nav-white">
@@ -54,60 +66,94 @@
             </div>
 
         </div>
+       
 
         <div class="dash">
-            <div id="alerta">
+            <div class="hello">
+                <h3>Olá, <span id="b_usuario">usuário</span>! Verifique as  atualizações de hoje!</h3>
             </div>
             <div class="regua">
-                <div class="item-regua perigo-frio">
+                <div class="item-regua perigo-frio critico">
+                    <img src="../src/images/images_card/warning.png" alt="" class="alertIcons">
                     <h4>Perigo</h4>
-                    <h2>&lt;=5°C</h2>
+                    Temperatura
+                    <h2> <span><img src="../src/images/images_card/dew_point.png" alt=""></span> &lt;=20°C</h2>
+                    Umidade
+                    <h2> <span><img src="../src/images/images_card/humidity_high.png" alt=""></span> &lt;=50°C</h2>
                 </div>
-                <div class="item-regua alerta-frio">
+                <div class="item-regua alerta-frio alerta">
+                    <img src="../src/images/images_card/report.png" alt="" class="alertIcons">
                     <h4>Alerta</h4>
-                    <h2>&lt;=10°C</h2>
+                    Temperatura
+                    <h2> <span><img src="../src/images/images_card/dew_point.png" alt=""></span> &lt;=23°C</h2>
+                    Umidade
+                    <h2> <span><img src="../src/images/images_card/humidity_high.png" alt=""></span> &lt;=57°C</h2>
                 </div>
                 <div class="item-regua ideal">
+                    <img src="../src/images/images_card/check_circle.png" alt="" class="alertIcons">
                     <h4>Ideal</h4>
-                    <h2>20°C</h2>
+                    Temperatura
+                    <h2> <span><img src="../src/images/images_card/dew_point.png" alt=""></span> =25°C</h2>
+                    Umidade
+                    <h2> <span><img src="../src/images/images_card/humidity_high.png" alt=""></span> &lt;=65%</h2>
                 </div>
-                <div class="item-regua alerta-quente">
+                <div class="item-regua alerta-quente alerta">
+                    <img src="../src/images/images_card/report.png" alt="" class="alertIcons">
                     <h4>Alerta</h4>
-                    <h2>&gt;=22°C</h2>
+                    Temperatura
+                    <h2> <span><img src="../src/images/images_card/dew_point.png" alt=""></span> >=27°C</h2>
+                    Umidade
+                    <h2> <span><img src="../src/images/images_card/humidity_high.png" alt=""></span> >=73°C</h2>
                 </div>
-                <div class="item-regua perigo-quente">
+                <div class="item-regua perigo-quente critico">
+                    <img src="../src/images/images_card/warning.png" alt="" class="alertIcons">
                     <h4>Perigo</h4>
-                    <h2>&gt;=23°C</h2>
+                    Temperatura
+                    <h2> <span><img src="../src/images/images_card/dew_point.png" alt=""></span> >=30°C</h2>
+                    Umidade
+                    <h2> <span><img src="../src/images/images_card/humidity_high.png" alt=""></span> >=80%</h2>
                 </div>
             </div>
 
             <div class="cards">
                 <div class="card">
-                    <h1>Aquário 1</h1>
+                    <h1 class="cardTitle">Hectar 1</h1>
                     <div class="temperatura">
                         <p id="temp_aquario_1">-°C</p>
+                    </div>
+                    <div class="Umidade">
+                        <p id="umid_aquario_1">-%</p>
                     </div>
                     <div class="cor-alerta" id="card_1"></div>
                 </div>
                 <div class="card">
-                    <h1>Aquário 2</h1>
+                    <h1 class="cardTitle">Hectar 2</h1>
                     <div class="temperatura">
                         <p id="temp_aquario_2">-°C</p>
+                    </div>
+                    <div class="Umidade">
+                        <p id="umid_aquario_2">-%</p>
                     </div>
                     <div class="cor-alerta" id="card_2"></div>
 
                 </div>
                 <div class="card">
-                    <h1>Aquário 3</h1>
+                    <h1 class="cardTitle">Hectar 3</h1>
                     <div class="temperatura">
                         <p id="temp_aquario_3">-°C</p>
+                    </div>
+                    <div class="Umidade">
+                        <p id="umid_aquario_3">-%</p>
                     </div>
                     <div class="cor-alerta" id="card_3"></div>
                 </div>
                 <div class="card">
-                    <h1>Aquário 4</h1>
+                    <h1 class="cardTitle">Hectar 4</h1>
                     <div class="temperatura">
                         <p id="temp_aquario_4">-°C</p>
+                    </div>
+                    <div class="Umidade">
+                        <p id="umid_aquario_4">-%</p>
                     </div>
                     <div class="cor-alerta" id="card_4"></div>
                 </div>
@@ -117,6 +163,40 @@
         </div>
     </div>
 
+    <footer class="footer">
+        <div class="container_rodape">
+            <div class="section">
+                <img class="img-footer" src="../src/images/images_Card/grapeWhite 1 (1).png" alt="">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="Login.html">Login</a></li>
+                    <li><a href="simulador.html">Simule</a></li>
+                    <li><a href="registro.html">Cadastro</a></li>
+                    <li><a href="index.html#sobre_nos">Sobre nós</a></li>
+                    
+                </ul>
+            </div>
+            <div class="contato">
+                <p>Contato</p>
+                
+                <div class="infos">                                        
+                    <ul>
+                        <li><img src="../src/images/images_Card/phone-call.png" alt="telefone-icon" id="img-footer-telefone">(11) 93463-3525</li>
+                        <li><img src="../src/images/images_Card/mail-icon-black-free-png.png" alt="mail-icon" id="img-footer-mail">contato@valleystech.com.br</li>
+                    </ul>
+                </div>
+        
+            </div>
+            <div class="section">
+                <a href="#">
+                    <div class="back-top">
+                    <img src="../src/images/images_Card/Seta-Cima-Png-removebg-preview.png" alt="" class="seta-icon">
+                    </div>
+                </a>
+            </div>
+            
+        </div>
+    </footer>
 
 </body>
 
@@ -152,9 +232,10 @@
 
                         var dados = {
                             temperatura: resposta[0].temperatura,
+                            umidade: resposta[0].umidade,
                             momento: resposta[0].momento
                         }
-                        alertar(resposta[0].temperatura, idAquario);
+                        alertar(resposta[0].temperatura, resposta[0].umidade, idAquario);
 
                     });
                 } else {

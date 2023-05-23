@@ -8,8 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AquaTech | Dashboards</title>
 
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="dashboards.css">
+    <link rel="stylesheet" href="dashboards3.css">
     <script src="../js/funcoes.js"></script>
     <script src="./alerta.js"></script>
 
@@ -28,25 +27,41 @@
 <!-- <body onload=" atualizarFeed()"> -->
 
 <body>
+    <header class="header-top">
+        <nav class="navegation">
+            <ul class="nav-ul">
+                <li class="list-ul"><a href="simulador.html">SIMULE</a></li>
+                <li class="list-ul"><a href="index.html#sobre_nos">SOBRE NÓS</a></li>
+            </ul>
+            <ul class="nav-ul">
+                <li class="list-ul"><a href="index.html"><img src="../src/images/images_Card/grapeWhite.png" alt="LOGO" class="list-logo"></a></li>
+            </ul>
+            <ul class="nav-ul">
+                <li class="agora list-ul"><a href="#">CADASTRO</a></li>
+                <li class="list-ul"><a href="Login.html">LOGIN</a></li>
+            </ul>
+        </nav>
+    </header>
+
 
     <div class="janela">
-        <div class="header-left">
-            <h1>AquaTech</h1>
 
-            <div class="hello">
-                <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
+
+
+        <div class="header-left dash-header">
+
+            <img src="../src/images/images_card/grapeWhite.png" alt="" id="logoIcon">
+
+            
+
+            <div class="btn-nav">
+                <h3>Hectares</h3>
             </div>
 
             <div class="btn-nav-white">
-                <a href="./cards.html">
-                    <h3>Aquários</h3>
+                <a href="./dashboard.html">
+                    <h3>Gráficos</h3>
                 </a>
-            </div>
-
-            <div class="btn-nav">
-
-                <h3>Gráficos</h3>
-
             </div>
 
             <div class="btn-nav-white">
@@ -62,15 +77,18 @@
         </div>
 
         <div class="dash">
-            <div id="alerta">
+            <div class="hello">
+                <h3>Olá, <span id="b_usuario">usuário</span>! Verifique as  atualizações de hoje!</h3>
             </div>
+            <!-- <div id="alerta">
+            </div> -->
 
             <div class="btns-dash">
                 <!-- O gráfico é chamado de acordo com o id (fk_aquario) do banco  -->
-                <button class="btn-chart btn-pink" onclick="exibirAquario(1)" id="btnAquario1">Aquario 1</button>
-                <button class="btn-chart btn-white" onclick="exibirAquario(2)" id="btnAquario2">Aquario 2</button>
-                <button class="btn-chart btn-white" onclick="exibirAquario(3)" id="btnAquario3">Aquario 3</button>
-                <button class="btn-chart btn-white" onclick="exibirAquario(4)" id="btnAquario4">Aquario 4</button>
+                <button class="btn-chart btn-pink" onclick="exibirAquario(1)" id="btnAquario1">Hectar 1</button>
+                <button class="btn-chart btn-white" onclick="exibirAquario(2)" id="btnAquario2">Hectar 2</button>
+                <button class="btn-chart btn-white" onclick="exibirAquario(3)" id="btnAquario3">Hectar 3</button>
+                <button class="btn-chart btn-white" onclick="exibirAquario(4)" id="btnAquario4">Hectar 4</button>
             </div>
             <div id="graficos">
                 <div id="grafico1" class="display-block">
@@ -81,7 +99,7 @@
                         <canvas id="myChartCanvas1"></canvas>
                     </div>
                     <div class="label-captura">
-                        <p id="avisoCaptura1" style="color: white"></p>
+                        <p id="avisoCaptura1" style="color: #212124"></p>
                     </div>
                 </div>
 
@@ -93,7 +111,7 @@
                         <canvas id="myChartCanvas2"></canvas>
                     </div>
                     <div class="label-captura">
-                        <p id="avisoCaptura2" style="color: white"></p>
+                        <p id="avisoCaptura2" style="color: #212124"></p>
                     </div>
                 </div>
 
@@ -105,7 +123,7 @@
                         <canvas id="myChartCanvas3"></canvas>
                     </div>
                     <div class="label-captura">
-                        <p id="avisoCaptura3" style="color: white"></p>
+                        <p id="avisoCaptura3" style="color: #212124"></p>
                     </div>
                 </div>
 
@@ -117,13 +135,46 @@
                         <canvas id="myChartCanvas4"></canvas>
                     </div>
                     <div class="label-captura">
-                        <p id="avisoCaptura4" style="color: white"></p>
+                        <p id="avisoCaptura4" style="color: #212124"></p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
+    <footer class="footer">
+        <div class="container_rodape">
+            <div class="section">
+                <img class="img-footer" src="../src/images/images_Card/grapeWhite 1 (1).png" alt="">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="Login.html">Login</a></li>
+                    <li><a href="simulador.html">Simule</a></li>
+                    <li><a href="registro.html">Cadastro</a></li>
+                    <li><a href="index.html#sobre_nos">Sobre nós</a></li>
+                    
+                </ul>
+            </div>
+            <div class="contato">
+                <p>Contato</p>
+                
+                <div class="infos">                                        
+                    <ul>
+                        <li><img src="../src/images/images_Card/phone-call.png" alt="telefone-icon" id="img-footer-telefone">(11) 93463-3525</li>
+                        <li><img src="../src/images/images_Card/mail-icon-black-free-png.png" alt="mail-icon" id="img-footer-mail">contato@valleystech.com.br</li>
+                    </ul>
+                </div>
+        
+            </div>
+            <div class="section">
+                <a href="#">
+                    <div class="back-top">
+                    <img src="../src/images/images_Card/Seta-Cima-Png-removebg-preview.png" alt="" class="seta-icon">
+                    </div>
+                </a>
+            </div>
+            
+        </div>
+    </footer>
 
 </body>
 
@@ -147,7 +198,7 @@
 
     function alterarTitulo(idAquario) {
         var tituloAquario = document.getElementById(`tituloAquario${idAquario}`)
-        tituloAquario.innerHTML = "Últimas medidas de Temperatura e Umidade do <span style='color: #e6005a'>Aquário " + idAquario + "</span>"
+        tituloAquario.innerHTML = "Últimas medidas de Temperatura e Umidade do <span style='color: #F81A42;'>Hectar " + idAquario + "</span>"
     }
 
     function exibirAquario(idAquario) {
@@ -233,14 +284,14 @@
                 label: 'Umidade',
                 data: [],
                 fill: false,
-                borderColor: 'rgb(75, 192, 192)',
+                borderColor: '#1aaaf8',
                 tension: 0.1
             },
             {
                 label: 'Temperatura',
                 data: [],
                 fill: false,
-                borderColor: 'rgb(199, 52, 52)',
+                borderColor: '#F81A42',
                 tension: 0.1
             }]
         };
