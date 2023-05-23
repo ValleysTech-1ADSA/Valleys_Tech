@@ -1,0 +1,521 @@
+/* pagina mural */
+
+
+
+
+.dash-right .avisos {
+  width: 100%;
+  /* border: 3px solid pink; */
+  color: rgb(216, 216, 216);
+
+}
+
+.dash-right .avisos .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dash-right .avisos .container .div-form {
+  width: 100%;
+}
+
+.dash-right .avisos .container .div-form #form_postagem {
+  width: 100%;
+}
+
+.dash-right .avisos .div-form label {
+  width: 100%;
+}
+
+.dash-right .avisos .div-form input {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.dash-right .avisos .div-form textarea {
+  width: 100%;
+  /* color: #F81A42; */
+  border: 3px solid #F81A42;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.dash-right .avisos .div-form button {
+  cursor: pointer;
+
+  border: 0;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 10px 15px;
+  color: white;
+  background-color: #F81A42;
+  width: 120px;
+}
+
+.publicacao-btn-editar {
+  cursor: pointer;
+
+  border: 0;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 5px 8px;
+  color: white;
+  background-color: #F81A42;
+  width: 80px;
+}
+
+.publicacao {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: stretch;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  border-bottom: 3px solid #F81A42;
+  padding: 20px;
+}
+
+.publicacao > *:not(:last-child) {
+  padding: 0 0 10px 0;
+}
+
+.div-results {
+  width: 100%;
+}
+
+.div-results .feed-container {
+  background-color: #212124;
+  border-radius: 5px;
+  margin-bottom: 80px;
+}
+
+.div-buttons {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.div-buttons > * {
+  margin-left: 30px;
+}
+
+/* pagina graficos */
+
+.dash-header {
+  background-color: #212124;
+}
+
+
+
+.regua {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.perigo-frio {
+  background-color: #5c6bc0;
+  border-radius: 15px;
+}
+
+.perigo-quente {
+  background-color: #ff7043;
+}
+
+.alerta-frio {
+  background-color: #42a5f5;
+}
+
+.alerta-quente {
+  background-color: #ffee58;
+  
+}
+
+.ideal {
+  background-color: #9ccc65;
+}
+
+.item-regua {
+  padding: 5px;
+  width: 15%;
+  margin: 5px;
+  text-align: center;
+  padding-top: 15px;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 450px;
+  width: 100%;
+  align-items: center;
+  color: white;
+}
+
+.card {
+  margin: 2%;
+  width: 40%;
+  flex-wrap: wrap;
+  display: flex;
+  text-align: center;
+  height: 180px;
+  justify-content: right;
+  background-color: #212124;
+  font-size: 20px;
+}
+
+.card p {
+  margin: 0;
+  font-size: 50px;
+  font-weight: lighter;
+  text-align: left;
+}
+
+.cards h1 {
+  font-size: 22px;
+  width: 100%;
+  border-bottom: solid white 1px;
+  text-align: left;
+  font-weight: lighter;
+  margin: 20px;
+}
+
+.temperatura,
+.umidade {
+  margin: 5px;
+  margin-left: 20px;
+  width: 75%;
+}
+
+.cor-alerta {
+  width: 13%;
+  height: 30%;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+
+
+
+
+
+
+
+
+.label-captura {
+  height: 80px;
+  
+}
+
+.display-none {
+  display: none;
+}
+
+.display-flex {
+  display: flex;
+}
+
+.display-block {
+  display: block;
+}
+
+canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+/* inicio nav */
+
+#alerta{
+    padding: 10px 30px;
+    position: absolute;
+    background-color: #FFFFFF;
+    right: 40px;
+    width: 300px;
+    border-radius: 50px;
+    border: #F81A42 2px solid;
+}
+
+.header-top{
+    background-color: #F81A42;
+    height: 80px;
+    padding: 0 10%;
+    margin-bottom: 40px;
+}
+
+.navegation{
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+    color: white;
+    font-weight: 100;
+
+}
+
+.nav-ul{
+    display: flex;
+    gap: 20px;
+
+}
+
+.list-ul{
+    list-style: none;
+    
+}
+
+.list-ul a:hover {
+    border-bottom: 1px solid white;
+}
+
+.agora {
+    border-bottom: 0.5px solid white;
+}
+
+.navegation .nav-ul .list-logo{
+    height: 60px;
+    
+}
+
+.navegation .nav-ul a{
+    text-decoration: none;
+    color: #FFFFFF;
+    
+}
+
+/* termino nav */
+
+
+.hello{
+    text-align: center;
+    margin: 10px;
+}
+
+.janela{
+    display: flex;
+    width: 100%;
+    margin: 0 40px;
+    margin: auto;
+    left: 0;
+    max-width: 1200px;
+    
+}
+
+.janela .header-left{
+    padding: 20px;
+    margin-left: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: #F81A42;
+    height: auto;
+    border-radius: 15px;
+    width: 100px;
+    color: #FFFFFF;
+    list-style: none;
+    text-decoration: none;
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:visited{
+    color: #FFFFFF;
+}
+
+.janela .header-left #logoIcon{
+    width: 75px;
+}
+
+.janela .dash{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 40px;
+    width: 100%;
+    background-color: #D9D9D9;
+    border-radius: 10px;
+}
+
+.janela .dash .regua{
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 30px;
+
+}
+
+.janela .dash .regua .item-regua{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100px;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px;
+    color: #FFFFFF;
+}
+
+.graph {
+    width: 100%;
+    margin: auto;
+    padding-top: 10px;
+    margin-bottom: 30px;
+  }
+
+
+  .btn-chart {
+    border: 3px solid #F81A42;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 10px 20px;
+    color: #F81A42;
+    background-color: white;
+    margin: 5px 5px 20px 5px;
+    border-radius: 3px;
+    
+  }
+  
+  .btn-pink {
+    color: white;
+    background-color: #F81A42;
+  }
+  
+  .btn-white {
+    color: #F81A42;
+    background-color: white;
+  
+  }
+
+  .btns-dash {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #avisoCaptura1{
+    color: #212124;
+  }
+
+  .tituloGraficos {
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .label-captura {
+    display: flex;
+    justify-content: center;
+  }
+
+/* footer */
+
+  .footer{
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 40px;
+    height: fit-content;
+    background-color: #F81A42;
+    padding: 60px 10%;; 
+    margin-top: 80px;
+}
+
+.footer .container_rodape {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer .section {
+    display: flex;
+}
+
+.footer .section .img-footer{
+    height: 80px;
+    margin-right: 40px;
+}
+
+.footer .section ul li a{
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: 100;
+}
+
+.footer .section ul li{
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: 100;
+}
+
+.footer .section .back-top{
+    height: 100px;
+    width: 100px;
+    border: 0 solid;
+    border-radius: 50px;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer .section .back-top .seta-icon{
+    height: 25%;
+    text-align: center;
+}
+
+section {
+    margin-left: 50px;
+    font-family: 'Montserrat', serif;
+}
+
+.footer .container_rodape .contato{
+    color: #FFFFFF;
+}
+.footer .container_rodape .contato p{
+    margin-bottom: 10px;
+}
+.footer .container_rodape .contato .infos{
+    display: flex;
+    align-items: center;
+}
+
+.footer .container_rodape .contato .infos li{
+    display: flex;
+    align-items: center;
+}
+
+.footer .container_rodape .contato #img-footer-telefone{
+    height: 25px;
+    margin-bottom: 10px;
+
+}
+.footer .container_rodape .contato #img-footer-mail{
+    height: 20px;
+
+    
+}

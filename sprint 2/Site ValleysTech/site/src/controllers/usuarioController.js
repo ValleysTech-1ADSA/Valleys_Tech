@@ -57,14 +57,12 @@ function entrar(req, res) {
                 }
             );
     }
+
 }
 
 function cadastrar(req, res) {
     // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
     var nome = req.body.nomeServer;
-    var sobrenome = req.body.sobrenomeServer;
-    var cpf = req.body.cpfServer;
-    var celular = req.body.celularServer;
     var email = req.body.emailServer;
     var senha = req.body.senhaServer;
 
@@ -75,16 +73,10 @@ function cadastrar(req, res) {
         res.status(400).send("Seu email está undefined!");
     } else if (senha == undefined) {
         res.status(400).send("Sua senha está undefined!");
-    } else if (cpf == undefined) {
-        res.status(400).send("Seu cpf está undefined!");
-    } else if (celular == undefined) {
-        res.status(400).send("Seu celular está undefined!");
-    } else if (sobrenome == undefined) {
-        res.status(400).send("Seu sobrenome está undefined!");
     } else {
         
         // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
-        usuarioModel.cadastrar(nome, sobrenome, cpf, celular, email, senha)
+        usuarioModel.cadastrar(nome, email, senha)
             .then(
                 function (resultado) {
                     res.json(resultado);

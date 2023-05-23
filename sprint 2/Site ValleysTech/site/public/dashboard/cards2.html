@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valley's Tech | Tempo Real</title>
+
+    <link rel="stylesheet" href="dashboards2.css">
+
+    <script src="../js/funcoes.js"></script>
+    <script src="./alerta.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body onload="validarSessao(), atualizacaoPeriodica()">
+    <header class="header-top">
+        <nav class="navegation">
+            <ul class="nav-ul">
+                <li class="list-ul"><a href="simulador.html">SIMULE</a></li>
+                <li class="list-ul"><a href="index.html#sobre_nos">SOBRE NÓS</a></li>
+            </ul>
+            <ul class="nav-ul">
+                <li class="list-ul"><a href="index.html"><img src="../src/images/images_Card/grapeWhite.png" alt="LOGO" class="list-logo"></a></li>
+            </ul>
+            <ul class="nav-ul">
+                <li class="agora list-ul"><a href="#">CADASTRO</a></li>
+                <li class="list-ul"><a href="Login.html">LOGIN</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="alerta">
+    </div>
+    
+    <div class="janela">
+
+
+        <div class="header-left dash-header">
+
+            <img src="../src/images/images_card/grapeWhite.png" alt="" id="logoIcon">
+
+            
+
+            <div class="btn-nav">
+                <h3>Hectares</h3>
+            </div>
+
+            <div class="btn-nav-white">
+                <a href="./dashboard.html">
+                    <h3>Gráficos</h3>
+                </a>
+            </div>
+
+            <div class="btn-nav-white">
+                <a href="./mural.html">
+                    <h3>Mural de Avisos</h3>
+                </a>
+            </div>
+
+            <div class="btn-logout" onclick="limparSessao()">
+                <h3>Sair</h3>
+            </div>
+
+        </div>
+       
+
+        <div class="dash">
+            <div class="hello">
+                <h3>Olá, <span id="b_usuario">usuário</span>! Verifique as  atualizações de hoje!</h3>
+            </div>
+            <div class="regua">
+                <div class="item-regua perigo-frio critico">
+                    <img src="../src/images/images_card/warning.png" alt="" class="alertIcons">
+                    <h4>Perigo</h4>
+                    Temperatura
+                    <h2> <span><img src="../src/images/images_card/dew_point.png" alt=""></span> &lt;=20°C</h2>
+                    Umidade
+                    <h2> <span><img src="../src/images/images_card/humidity_high.png" alt=""></span> &lt;=50°C</h2>
+                </div>
+                <div class="item-regua alerta-frio alerta">
+                    <img src="../src/images/images_card/report.png" alt="" class="alertIcons">
+                    <h4>Alerta</h4>
+                    Temperatura
+                    <h2> <span><img src="../src/images/images_card/dew_point.png" alt=""></span> &lt;=23°C</h2>
+                    Umidade
+                    <h2> <span><img src="../src/images/images_card/humidity_high.png" alt=""></span> &lt;=57°C</h2>
+                </div>
+                <div class="item-regua ideal">
+                    <img src="../src/images/images_card/check_circle.png" alt="" class="alertIcons">
+                    <h4>Ideal</h4>
+                    Temperatura
+                    <h2> <span><img src="../src/images/images_card/dew_point.png" alt=""></span> =25°C</h2>
+                    Umidade
+                    <h2> <span><img src="../src/images/images_card/humidity_high.png" alt=""></span> &lt;=65%</h2>
+                </div>
+                <div class="item-regua alerta-quente alerta">
+                    <img src="../src/images/images_card/report.png" alt="" class="alertIcons">
+                    <h4>Alerta</h4>
+                    Temperatura
+                    <h2> <span><img src="../src/images/images_card/dew_point.png" alt=""></span> >=27°C</h2>
+                    Umidade
+                    <h2> <span><img src="../src/images/images_card/humidity_high.png" alt=""></span> >=73°C</h2>
+                </div>
+                <div class="item-regua perigo-quente critico">
+                    <img src="../src/images/images_card/warning.png" alt="" class="alertIcons">
+                    <h4>Perigo</h4>
+                    Temperatura
+                    <h2> <span><img src="../src/images/images_card/dew_point.png" alt=""></span> >=30°C</h2>
+                    Umidade
+                    <h2> <span><img src="../src/images/images_card/humidity_high.png" alt=""></span> >=80%</h2>
+                </div>
+            </div>
+
+            <div class="cards">
+                <div class="card">
+                    <h1 class="cardTitle">Hectar 1</h1>
+                    <div class="temperatura">
+                        <p id="temp_aquario_1">-°C</p>
+                    </div>
+                    <div class="Umidade">
+                        <p id="umid_aquario_1">-%</p>
+                    </div>
+                    <div class="cor-alerta" id="card_1"></div>
+                </div>
+                <div class="card">
+                    <h1 class="cardTitle">Hectar 2</h1>
+                    <div class="temperatura">
+                        <p id="temp_aquario_2">-°C</p>
+                    </div>
+                    <div class="Umidade">
+                        <p id="umid_aquario_2">-%</p>
+                    </div>
+                    <div class="cor-alerta" id="card_2"></div>
+
+                </div>
+                <div class="card">
+                    <h1 class="cardTitle">Hectar 3</h1>
+                    <div class="temperatura">
+                        <p id="temp_aquario_3">-°C</p>
+                    </div>
+                    <div class="Umidade">
+                        <p id="umid_aquario_3">-%</p>
+                    </div>
+                    <div class="cor-alerta" id="card_3"></div>
+                </div>
+                <div class="card">
+                    <h1 class="cardTitle">Hectar 4</h1>
+                    <div class="temperatura">
+                        <p id="temp_aquario_4">-°C</p>
+                    </div>
+                    <div class="Umidade">
+                        <p id="umid_aquario_4">-%</p>
+                    </div>
+                    <div class="cor-alerta" id="card_4"></div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container_rodape">
+            <div class="section">
+                <img class="img-footer" src="../src/images/images_Card/grapeWhite 1 (1).png" alt="">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="Login.html">Login</a></li>
+                    <li><a href="simulador.html">Simule</a></li>
+                    <li><a href="registro.html">Cadastro</a></li>
+                    <li><a href="index.html#sobre_nos">Sobre nós</a></li>
+                    
+                </ul>
+            </div>
+            <div class="contato">
+                <p>Contato</p>
+                
+                <div class="infos">                                        
+                    <ul>
+                        <li><img src="../src/images/images_Card/phone-call.png" alt="telefone-icon" id="img-footer-telefone">(11) 93463-3525</li>
+                        <li><img src="../src/images/images_Card/mail-icon-black-free-png.png" alt="mail-icon" id="img-footer-mail">contato@valleystech.com.br</li>
+                    </ul>
+                </div>
+        
+            </div>
+            <div class="section">
+                <a href="#">
+                    <div class="back-top">
+                    <img src="../src/images/images_Card/Seta-Cima-Png-removebg-preview.png" alt="" class="seta-icon">
+                    </div>
+                </a>
+            </div>
+            
+        </div>
+    </footer>
+
+</body>
+
+<script>
+
+    function atualizacaoPeriodica() {
+        obterdados(1);
+        obterdados(2);
+        obterdados(3);
+        obterdados(4);
+
+        // function sendData() {
+        //     var http = new XMLHttpRequest();
+        //     http.open('POST', 'http://localhost:3000/api/sendData', false);
+        //     http.send(null);
+        // }
+
+        // setInterval(() => {
+        //     sendData();
+        // }, 2000);
+
+        setTimeout(atualizacaoPeriodica, 5000);
+    }
+
+    function obterdados(idAquario) {
+        fetch(`/medidas/tempo-real/${idAquario}`)
+            .then(resposta => {
+
+                if (resposta.ok) {
+                    resposta.json().then(resposta => {
+
+                        console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+
+                        var dados = {
+                            temperatura: resposta[0].temperatura,
+                            umidade: resposta[0].umidade,
+                            momento: resposta[0].momento
+                        }
+                        alertar(resposta[0].temperatura, resposta[0].umidade, idAquario);
+
+                    });
+                } else {
+
+                    console.error('Nenhum dado encontrado ou erro na API');
+                }
+            })
+            .catch(function (error) {
+                console.error(`Erro na obtenção dos dados do aquario p/ gráfico: ${error.message}`);
+            });
+
+    }
+
+</script>
+
+</html>
