@@ -20,7 +20,7 @@
         rel="stylesheet">
 </head>
 
-<body>
+<body onload="validarSessao()">
     <header class="header-top">
         <nav class="navegation">
             <ul class="nav-ul">
@@ -47,15 +47,6 @@
                     <div class="form">
                         <label for="nome">Nome</label>
                         <input class="input-text" type="text" id="nome" >
-                        <br>
-                        <label for="sobrenome">Sobrenome</label>
-                        <input class="input-text" type="text" id="sobrenome" >
-                        <br>
-                        <label for="cpf">CPF</label>
-                        <input class="input-text" type="number" id="cpf" >
-                        <br>
-                        <label for="celular">Celular</label>
-                        <input class="input-text" type="text" id="celular" >
                         <br>
                         <label for="email">Email</label>
                         <input class="input-text" type="email" id="email" >
@@ -130,12 +121,10 @@
         //Recupere o valor da nova input pelo nome do id
         // Agora vá para o método fetch logo abaixo
         var nomeVar = nome.value;
-        var sobrenomeVar = sobrenome.value;
-        var cpfVar = cpf.value;
-        var celularVar = celular.value;
         var emailVar = email.value;
         var senhaVar = senha.value;
         var confirmacaoSenhaVar = confirmarSenha.value;
+        var empresaVar = sessionStorage.EMPRESA_USUARIO;
 
         if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
             cardErro.style.display = "block"
@@ -147,7 +136,7 @@
         else {
             setInterval(sumirMensagem, 5000)
         }
-
+        console.log(sessionStorage.EMPRESA_USUARIO)
         // Enviando o valor da nova input
         fetch("/usuarios/cadastrar", {
             method: "POST",
@@ -158,11 +147,9 @@
                 // crie um atributo que recebe o valor recuperado aqui
                 // Agora vá para o arquivo routes/usuario.js
                 nomeServer: nomeVar,
-                sobrenomeServer: sobrenomeVar,
-                cpfServer: cpfVar,
-                celularServer: celularVar,
                 emailServer: emailVar,
-                senhaServer: senhaVar
+                senhaServer: senhaVar,
+                empresaServer: empresaVar
             })
         }).then(function (resposta) {
 
