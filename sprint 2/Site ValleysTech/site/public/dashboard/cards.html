@@ -8,7 +8,7 @@
     <title>Valley's Tech | Tempo Real</title>
 
     <link rel="stylesheet" href="dashboards2.css">
-
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../js/funcoes.js"></script>
     <script src="./alerta.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -21,15 +21,15 @@
     <header class="header-top">
         <nav class="navegation">
             <ul class="nav-ul">
-                <li class="list-ul"><a href="simulador.html">SIMULE</a></li>
-                <li class="list-ul"><a href="index.html#sobre_nos">SOBRE NÓS</a></li>
+                <li class="list-ul"><a href="../simulador.html">SIMULE</a></li>
+                <li class="list-ul"><a href="../index.html#sobre_nos">SOBRE NÓS</a></li>
             </ul>
             <ul class="nav-ul">
-                <li class="list-ul"><a href="index.html"><img src="../src/images/images_Card/grapeWhite.png" alt="LOGO" class="list-logo"></a></li>
+                <li class="list-ul"><a href="../index.html"><img src="../src/images/images_Card/grapeWhite.png" alt="LOGO" class="list-logo"></a></li>
             </ul>
             <ul class="nav-ul">
-                <li class="agora list-ul"><a href="#">CADASTRO</a></li>
-                <li class="list-ul"><a href="Login.html">LOGIN</a></li>
+                <li class="agora list-ul"><a href="../cadastro.html">CADASTRO</a></li>
+                <!-- <li class="list-ul"><a href="Login.html">LOGIN</a></li> -->
             </ul>
         </nav>
     </header>
@@ -45,19 +45,13 @@
 
             
 
-            <div class="btn-nav">
+            <div class="btn-nav atual">
                 <h3>Hectares</h3>
             </div>
 
             <div class="btn-nav-white">
                 <a href="./dashboard.html">
                     <h3>Gráficos</h3>
-                </a>
-            </div>
-
-            <div class="btn-nav-white">
-                <a href="./mural.html">
-                    <h3>Mural de Avisos</h3>
                 </a>
             </div>
 
@@ -117,7 +111,7 @@
 
             <div class="cards">
                 <div class="card">
-                    <h1 class="cardTitle">Hectar 1</h1>
+                    <h1 class="cardTitle">Hectare 1</h1>
                     <div class="temperatura">
                         <p id="temp_aquario_1">-°C</p>
                     </div>
@@ -127,7 +121,7 @@
                     <div class="cor-alerta" id="card_1"></div>
                 </div>
                 <div class="card">
-                    <h1 class="cardTitle">Hectar 2</h1>
+                    <h1 class="cardTitle">Hectare 2</h1>
                     <div class="temperatura">
                         <p id="temp_aquario_2">-°C</p>
                     </div>
@@ -138,7 +132,7 @@
 
                 </div>
                 <div class="card">
-                    <h1 class="cardTitle">Hectar 3</h1>
+                    <h1 class="cardTitle">Hectare 3</h1>
                     <div class="temperatura">
                         <p id="temp_aquario_3">-°C</p>
                     </div>
@@ -148,7 +142,7 @@
                     <div class="cor-alerta" id="card_3"></div>
                 </div>
                 <div class="card">
-                    <h1 class="cardTitle">Hectar 4</h1>
+                    <h1 class="cardTitle">Hectare 4</h1>
                     <div class="temperatura">
                         <p id="temp_aquario_4">-°C</p>
                     </div>
@@ -157,7 +151,9 @@
                     </div>
                     <div class="cor-alerta" id="card_4"></div>
                 </div>
-
+            </div>
+            <div class="label-captura">
+                <p id="avisoCaptura" style="color: #212124"></p>
             </div>
 
         </div>
@@ -229,18 +225,20 @@
                     resposta.json().then(resposta => {
 
                         console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
-
                         var dados = {
                             temperatura: resposta[0].temperatura,
                             umidade: resposta[0].umidade,
-                            momento: resposta[0].momento
+                            momento: resposta[0].momento_grafico,
                         }
                         alertar(resposta[0].temperatura, resposta[0].umidade, idAquario);
+                        parametros = JSON.stringify(resposta)
+                        avisoCaptura.innerHTML = `<i class='fa-solid fa-triangle-exclamation'></i> Última atualização dos sensores: ${resposta[0].momento_grafico}`
 
                     });
                 } else {
 
-                    console.error('Nenhum dado encontrado ou erro na API');
+                    let avisoCaptura = document.getElementById(`avisoCaptura${idAquario}`)
+                    
                 }
             })
             .catch(function (error) {

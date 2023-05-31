@@ -7,11 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AquaTech | Dashboards</title>
-
     <link rel="stylesheet" href="dashboards3.css">
     <script src="../js/funcoes.js"></script>
     <script src="./alerta.js"></script>
-
+    <link rel="icon" href="../src/images/images_card/icon.png">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
         href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
@@ -24,9 +23,9 @@
     <script src="https://kit.fontawesome.com/9f7414eb10.js" crossorigin="anonymous"></script>
 </head>
 
-<!-- <body onload=" atualizarFeed()"> -->
+<body onload=" atualizarFeed()">
 
-<body>
+<!-- <body onload="validarSessao(), atualizacaoPeriodica()"> -->
     <header class="header-top">
         <nav class="navegation">
             <ul class="nav-ul">
@@ -42,7 +41,8 @@
             </ul>
         </nav>
     </header>
-
+    <div id="alerta">
+    </div>
 
     <div class="janela">
 
@@ -55,19 +55,14 @@
             
 
             <div class="btn-nav">
-                <h3>Hectares</h3>
-            </div>
-
-            <div class="btn-nav-white">
-                <a href="./dashboard.html">
-                    <h3>Gráficos</h3>
+                
+                <a href="cards.html">
+                    <h3>Hectares</h3>
                 </a>
             </div>
 
-            <div class="btn-nav-white">
-                <a href="./mural.html">
-                    <h3>Mural de Avisos</h3>
-                </a>
+            <div class="btn-nav-white atual">
+                <h3>Gráficos</h3>
             </div>
 
             <div class="btn-logout" onclick="limparSessao()">
@@ -85,10 +80,10 @@
 
             <div class="btns-dash">
                 <!-- O gráfico é chamado de acordo com o id (fk_aquario) do banco  -->
-                <button class="btn-chart btn-pink" onclick="exibirAquario(1)" id="btnAquario1">Hectar 1</button>
-                <button class="btn-chart btn-white" onclick="exibirAquario(2)" id="btnAquario2">Hectar 2</button>
-                <button class="btn-chart btn-white" onclick="exibirAquario(3)" id="btnAquario3">Hectar 3</button>
-                <button class="btn-chart btn-white" onclick="exibirAquario(4)" id="btnAquario4">Hectar 4</button>
+                <button class="btn-chart btn-pink" onclick="exibirAquario(1)" id="btnAquario1">Hectare 1</button>
+                <button class="btn-chart btn-white" onclick="exibirAquario(2)" id="btnAquario2">Hectare 2</button>
+                <button class="btn-chart btn-white" onclick="exibirAquario(3)" id="btnAquario3">Hectare 3</button>
+                <button class="btn-chart btn-white" onclick="exibirAquario(4)" id="btnAquario4">Hectare 4</button>
             </div>
             <div id="graficos">
                 <div id="grafico1" class="display-block">
@@ -198,7 +193,7 @@
 
     function alterarTitulo(idAquario) {
         var tituloAquario = document.getElementById(`tituloAquario${idAquario}`)
-        tituloAquario.innerHTML = "Últimas medidas de Temperatura e Umidade do <span style='color: #F81A42;'>Hectar " + idAquario + "</span>"
+        tituloAquario.innerHTML = "Últimas medidas de Temperatura e Umidade do <span style='color: #F81A42;'>Hectare " + idAquario + "</span>"
     }
 
     function exibirAquario(idAquario) {
