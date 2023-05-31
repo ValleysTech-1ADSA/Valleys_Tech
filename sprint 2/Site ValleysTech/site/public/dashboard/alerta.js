@@ -235,7 +235,7 @@ function exibirMensagem(temperatura, idAquario, grauDeAviso, grauDeAvisoCor) {
     var mensagem = `<div class="mensagem-alarme">
     <div class="informacao">
     <div class="${grauDeAvisoCor}">&#12644;</div> 
-     <h3>Hectar ${idAquario} está em estado de ${grauDeAviso}!</h3>
+     <h3>Hectare ${idAquario} está em estado de ${grauDeAviso}!</h3>
     <p style = "text-align: center;">Temperatura ${temperatura}.</p>   
     </div>
     `;
@@ -251,7 +251,7 @@ function exibirMensagemUmidade(umidade, idAquario, grauDeAviso, grauDeAvisoCor) 
     var mensagem = `<div class="mensagem-alarme">
     <div class="informacao">
     <div class="${grauDeAvisoCor}">&#12644;</div> 
-     <h3>Hectar ${idAquario} está em estado de ${grauDeAviso}!</h3>
+     <h3>Hectare ${idAquario} está em estado de ${grauDeAviso}!</h3>
     <p style = "text-align: center;">Umidade ${umidade}.</p>   
     </div>
     `;
