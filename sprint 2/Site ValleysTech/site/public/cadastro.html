@@ -11,7 +11,7 @@
 
     <script src="./js/funcoes.js"></script>
 
-
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="icon" href="src\images\images_inicio\icon.png">
     <link rel="stylesheet" href="./css/style_login.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -127,9 +127,11 @@
         var empresaVar = sessionStorage.EMPRESA_USUARIO;
 
         if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
-            cardErro.style.display = "block"
-            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
-
+            Swal.fire({
+                icon: 'error',
+                title: 'Não foi possivel completar o seu cadastro!',
+                text: 'Preencha todos os campos em branco!',
+                })
             finalizarAguardar();
             return false;
         }
@@ -156,13 +158,33 @@
             console.log("resposta: ", resposta);
 
             if (resposta.ok) {
-                cardErro.style.display = "block";
+                Swal.fire(
+                    'Tudo certo!',
+                    'Cadastro realizado com sucesso!',
+                    'success'
+                    )
 
-                mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
-
-                setTimeout(() => {
-                    window.location = "login.html";
-                }, "2000")
+                    Swal.fire({
+                    title: 'Tudo certo!',
+                    text: "Cadastro realizado com sucesso!",
+                    icon: 'success',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Login'
+                    }).then((result) => {
+                    if (result.isConfirmed) {
+                        Swal.fire(
+                        'Tudo certo!',
+                        'Estamos te redirecionando',
+                        'success'
+                        )
+                        setTimeout(() => {
+                        window.location = "login.html";
+                        }, "2000")
+                    }
+                    })
+                
 
                 limparFormulario();
                 finalizarAguardar();

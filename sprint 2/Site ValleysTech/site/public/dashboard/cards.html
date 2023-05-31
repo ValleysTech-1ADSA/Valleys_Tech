@@ -151,7 +151,9 @@
                     </div>
                     <div class="cor-alerta" id="card_4"></div>
                 </div>
-
+            </div>
+            <div class="label-captura">
+                <p id="avisoCaptura" style="color: #212124"></p>
             </div>
 
         </div>
@@ -223,18 +225,20 @@
                     resposta.json().then(resposta => {
 
                         console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
-
                         var dados = {
                             temperatura: resposta[0].temperatura,
                             umidade: resposta[0].umidade,
-                            momento: resposta[0].momento
+                            momento: resposta[0].momento_grafico,
                         }
                         alertar(resposta[0].temperatura, resposta[0].umidade, idAquario);
+                        parametros = JSON.stringify(resposta)
+                        avisoCaptura.innerHTML = `<i class='fa-solid fa-triangle-exclamation'></i> Última atualização dos sensores: ${resposta[0].momento_grafico}`
 
                     });
                 } else {
 
-                    console.error('Nenhum dado encontrado ou erro na API');
+                    let avisoCaptura = document.getElementById(`avisoCaptura${idAquario}`)
+                    
                 }
             })
             .catch(function (error) {
