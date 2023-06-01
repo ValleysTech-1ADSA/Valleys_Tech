@@ -77,7 +77,7 @@ constraint pkLeitura primary key (idLeitura, fksensor)
 );
 
 
-desc 
+desc;
 
 INSERT INTO empresa VALUES
 	(null, 'viticultura', 'Valleys Tec', '56330862000137'),
