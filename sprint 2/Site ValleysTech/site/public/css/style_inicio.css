@@ -101,6 +101,11 @@ a {
     
 }
 
+#logo{
+    position: relative;
+    left: 30px;
+}
+
 .container-right .container-right-txt  {
     margin-left: 40px;
     display: flex;
@@ -127,7 +132,6 @@ a {
 
 .logo-center {
     width: 120px;
-    margin-right: 19px;
 }
 
 .fundo_branco {

@@ -51,6 +51,11 @@ a{
     
 }
 
+#logo{
+    position: relative;
+    left: 30px;
+}
+
 .agora {
     border-bottom: 0.5px solid white;
 }

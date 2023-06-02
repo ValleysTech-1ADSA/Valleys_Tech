@@ -41,6 +41,14 @@
 .list-ul a:hover {
     border-bottom: 1px solid white;
 }
+#logo{
+    position: relative;
+    left: 30px;
+}
+#logoCadastro{
+    position: relative;
+    right: 50px;
+}
 
 .agora {
     border-bottom: 0.5px solid white;
