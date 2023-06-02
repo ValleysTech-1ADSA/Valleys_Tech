@@ -74,16 +74,16 @@
             </div> -->
 
             <div class="btns-dash">
-                <!-- O gráfico é chamado de acordo com o id (fk_aquario) do banco  -->
-                <button class="btn-chart btn-pink" onclick="exibirAquario(1)" id="btnAquario1">Hectare 1</button>
-                <button class="btn-chart btn-white" onclick="exibirAquario(2)" id="btnAquario2">Hectare 2</button>
-                <button class="btn-chart btn-white" onclick="exibirAquario(3)" id="btnAquario3">Hectare 3</button>
-                <button class="btn-chart btn-white" onclick="exibirAquario(4)" id="btnAquario4">Hectare 4</button>
+                <!-- O gráfico é chamado de acordo com o id (fk_hectare) do banco  -->
+                <button class="btn-chart btn-pink" onclick="exibirhectare(1)" id="btnhectare1">Hectare 1</button>
+                <button class="btn-chart btn-white" onclick="exibirhectare(2)" id="btnhectare2">Hectare 2</button>
+                <button class="btn-chart btn-white" onclick="exibirhectare(3)" id="btnhectare3">Hectare 3</button>
+                <button class="btn-chart btn-white" onclick="exibirhectare(4)" id="btnhectare4">Hectare 4</button>
             </div>
             <div id="graficos">
                 <div id="grafico1" class="display-block">
                     <h3 class="tituloGraficos">
-                        <span id="tituloAquario1">123</span>
+                        <span id="titulohectare1">123</span>
                     </h3>
                     <div class="graph">
                         <canvas id="myChartCanvas1"></canvas>
@@ -95,7 +95,7 @@
 
                 <div id="grafico2" class="display-none">
                     <h3 class="tituloGraficos">
-                        <span id="tituloAquario2"></span>
+                        <span id="titulohectare2"></span>
                     </h3>
                     <div class="graph">
                         <canvas id="myChartCanvas2"></canvas>
@@ -107,7 +107,7 @@
 
                 <div id="grafico3" class="display-none">
                     <h3 class="tituloGraficos">
-                        <span id="tituloAquario3"></span>
+                        <span id="titulohectare3"></span>
                     </h3>
                     <div class="graph">
                         <canvas id="myChartCanvas3"></canvas>
@@ -119,7 +119,7 @@
 
                 <div id="grafico4" class="display-none">
                     <h3 class="tituloGraficos">
-                        <span id="tituloAquario4"></span>
+                        <span id="titulohectare4"></span>
                     </h3>
                     <div class="graph">
                         <canvas id="myChartCanvas4"></canvas>
@@ -192,12 +192,12 @@
 
     verificar_autenticacao();
 
-    function alterarTitulo(idAquario) {
-        var tituloAquario = document.getElementById(`tituloAquario${idAquario}`)
-        tituloAquario.innerHTML = "Últimas medidas de Temperatura e Umidade do <span style='color: #F81A42;'>Hectare " + idAquario + "</span>"
+    function alterarTitulo(idHectare) {
+        var titulohectare = document.getElementById(`titulohectare${idHectare}`)
+        titulohectare.innerHTML = "Últimas medidas de Temperatura e Umidade do <span style='color: #F81A42;'>Hectare " + idHectare + "</span>"
     }
 
-    function exibirAquario(idAquario) {
+    function exibirhectare(idHectare) {
         let todosOsGraficos = document.getElementById("graficos")
 
         for (i = 1; i <= todosOsGraficos.childElementCount; i++) {
@@ -209,7 +209,7 @@
             elementoAtual.classList.add("display-none")
 
             // alterando estilo do botão
-            let btnAtual = document.getElementById(`btnAquario${i}`)
+            let btnAtual = document.getElementById(`btnhectare${i}`)
             if (btnAtual.classList.contains("btn-pink")) {
                 btnAtual.classList.remove("btn-pink")
             }
@@ -217,12 +217,12 @@
         }
 
         // exibindo - ou não - o gráfico
-        let graficoExibir = document.getElementById(`grafico${idAquario}`)
+        let graficoExibir = document.getElementById(`grafico${idHectare}`)
         graficoExibir.classList.remove("display-none")
         graficoExibir.classList.add("display-block")
 
         // alterando estilo do botão
-        let btnExibir = document.getElementById(`btnAquario${idAquario}`)
+        let btnExibir = document.getElementById(`btnhectare${idHectare}`)
         btnExibir.classList.remove("btn-white")
         btnExibir.classList.add("btn-pink")
     }
@@ -238,21 +238,21 @@
 
     //     Se quiser alterar a busca, ajuste as regras de negócio em src/controllers
     //     Para ajustar o "select", ajuste o comando sql em src/models
-    function obterDadosGrafico(idAquario) {
+    function obterDadosGrafico(idHectare) {
 
-        alterarTitulo(idAquario)
+        alterarTitulo(idHectare)
 
         if (proximaAtualizacao != undefined) {
             clearTimeout(proximaAtualizacao);
         }
 
-        fetch(`/medidas/ultimas/${idAquario}`, { cache: 'no-store' }).then(function (response) {
+        fetch(`/medidas/ultimas/${idHectare}`, { cache: 'no-store' }).then(function (response) {
             if (response.ok) {
                 response.json().then(function (resposta) {
                     console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
                     resposta.reverse();
 
-                    plotarGrafico(resposta, idAquario);
+                    plotarGrafico(resposta, idHectare);
                 });
             } else {
                 console.error('Nenhum dado encontrado ou erro na API');
@@ -266,7 +266,7 @@
     // Esta função *plotarGrafico* usa os dados capturados na função anterior para criar o gráfico
     // Configura o gráfico (cores, tipo, etc), materializa-o na página e, 
     // A função *plotarGrafico* também invoca a função *atualizarGrafico*
-    function plotarGrafico(resposta, idAquario) {
+    function plotarGrafico(resposta, idHectare) {
 
         console.log('iniciando plotagem do gráfico...');
 
@@ -320,11 +320,11 @@
 
         // Adicionando gráfico criado em div na tela
         let myChart = new Chart(
-            document.getElementById(`myChartCanvas${idAquario}`),
+            document.getElementById(`myChartCanvas${idHectare}`),
             config
         );
 
-        setTimeout(() => atualizarGrafico(idAquario, dados, myChart), 2000);
+        setTimeout(() => atualizarGrafico(idHectare, dados, myChart), 2000);
     }
 
 
@@ -333,11 +333,11 @@
 
     //     Se quiser alterar a busca, ajuste as regras de negócio em src/controllers
     //     Para ajustar o "select", ajuste o comando sql em src/models
-    function atualizarGrafico(idAquario, dados, myChart) {
+    function atualizarGrafico(idHectare, dados, myChart) {
 
 
 
-        fetch(`/medidas/tempo-real/${idAquario}`, { cache: 'no-store' }).then(function (response) {
+        fetch(`/medidas/tempo-real/${idHectare}`, { cache: 'no-store' }).then(function (response) {
             if (response.ok) {
                 response.json().then(function (novoRegistro) {
 
@@ -345,7 +345,7 @@
                     console.log(`Dados atuais do gráfico:`);
                     console.log(dados);
 
-                    let avisoCaptura = document.getElementById(`avisoCaptura${idAquario}`)
+                    let avisoCaptura = document.getElementById(`avisoCaptura${idHectare}`)
                     avisoCaptura.innerHTML = ""
 
 
@@ -373,12 +373,12 @@
                     }
 
                     // Altere aqui o valor em ms se quiser que o gráfico atualize mais rápido ou mais devagar
-                    proximaAtualizacao = setTimeout(() => atualizarGrafico(idAquario, dados, myChart), 2000);
+                    proximaAtualizacao = setTimeout(() => atualizarGrafico(idHectare, dados, myChart), 2000);
                 });
             } else {
                 console.error('Nenhum dado encontrado ou erro na API');
                 // Altere aqui o valor em ms se quiser que o gráfico atualize mais rápido ou mais devagar
-                proximaAtualizacao = setTimeout(() => atualizarGrafico(idAquario, dados, myChart), 2000);
+                proximaAtualizacao = setTimeout(() => atualizarGrafico(idHectare, dados, myChart), 2000);
             }
         })
             .catch(function (error) {

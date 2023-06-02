@@ -93,7 +93,7 @@ Abaixo, uma figura que ajuda a compreender o caminho percorrido para, por exempl
 **Entendi o que é um recurso e gostaria de adicionar um novo ao meu projeto! Como faz?**  
 - Primeiro, crie a tabela no Banco de Dados referente a este recurso. Exemplos de recursos comuns de serem adicionados ao projeto no primeiro semestre: Silo, Aquário, Sala, Andar, Endereço, Mercado, Prateleira, Unidade, Carro, Caminhão...  
 - Assim que criada a tabela, faça todo o caminho de **front-end → routes → controllers → models** replicando o que já existe!  
-- Exemplo, se você quiser a funcionalidade de adicionar um novo Aquário, deve criar arquivos referentes ao aquario nos diretórios e replicar também as funções.  
+- Exemplo, se você quiser a funcionalidade de adicionar um novo Aquário, deve criar arquivos referentes ao hectare nos diretórios e replicar também as funções.  
 - Dica: A implementação de AVISO já contém o CRUD completo! :wink:
  
 ### Fontes bibliográficas
