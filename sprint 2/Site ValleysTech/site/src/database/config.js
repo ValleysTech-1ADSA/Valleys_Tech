@@ -17,20 +17,12 @@ var sqlServerConfig = {
     }
 }
 
-// // CONEXÃO DO MYSQL WORKBENCH
-// var mySqlConfig = {
-//     host: "127.0.0.1",
-//     database: "valleysTech",
-//     user: "root",
-//     password: "040709",
-// };
-
 // CONEXÃO DO MYSQL WORKBENCH
 var mySqlConfig = {
-    host: "localhost",
+    host: "127.0.0.1",
     database: "valleysTech",
     user: "root",
-    password: "marcos1806",
+    password: "040709",
 };
 
 function executar(instrucao) {

@@ -233,6 +233,26 @@ a:visited{
 
 
 
+/* Botão de suporte */
+
+#floatButton{
+    height: 100px;
+    width: 100px;
+    background-color: #FFFFFF;
+    border-radius: 100px;
+    position: fixed;
+    right: 50px;
+    bottom: 100px;
+    border: #000000 3px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+#supportIcon{
+    height: 75px;
+}
+
 
 .footer{
     font-family: 'Montserrat', sans-serif;
