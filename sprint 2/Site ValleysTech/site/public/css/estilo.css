@@ -257,3 +257,15 @@ body {
   overflow: scroll; 
   height: var(--tamanho-simulador);
 }
+
+.button{
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  background-color: rgb(230, 89, 89);
+}
