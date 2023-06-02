@@ -10,9 +10,6 @@
     font-family: "Montserrat";
 }
 
-body{
-}
-
 
 /* inicio nav */
 
@@ -22,7 +19,7 @@ body{
     background-color: #FFFFFF;
     right: 40px;
     width: 300px;
-    border-radius: 50px;
+    border-radius: 20px;
     border: #F81A42 2px solid;
 }
 
