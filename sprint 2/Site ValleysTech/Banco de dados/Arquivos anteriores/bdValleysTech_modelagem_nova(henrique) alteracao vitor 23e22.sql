@@ -1,6 +1,8 @@
-CREATE DATABASE ValleysTech;
+CREATE DATABASE valleysTech;
 
-USE ValleysTech;
+drop database valleysTech;
+
+USE valleysTech;
 
 CREATE TABLE empresa (
 id int primary key auto_increment,
@@ -68,7 +70,7 @@ insert into empresa values
 (null, 'Marquinhos Uvas', 'Uvas do Mano Marquinhos', '14681276000134');
 
 insert into usuario values
-(null, 'Nicolas Cage', 'nickcage@gmail.com', 'motoqueirofantasma', true, 1);
+(null, 'Nicolas Cage', 'nickcage@gmail.com', 'motoqueirofantasma', 1, null);
 
 insert into endereco values
 (null, 'Rua Tilambuco', 'Ponta Grossa', 'Jardim São Vicente', '02365-444');
@@ -83,10 +85,16 @@ insert into hectare values
 (null, 'Hectare ao oeste da plantação', 1, 1);
 
 insert into sensor values
-(null, 'DHT-11', 'Ativo', 1),
-(null, 'DHT-11', 'Ativo', 2),
-(null, 'DHT-11', 'Ativo', 3),
-(null, 'DHT-11', 'Ativo', 4);
+(null, 'DHT-11', 'Ativo', 1);
+
+show tables;
 
 select * from hectare;
+
+insert into medida values
+(null, 72, 24, now(), 2),
+(null, 72, 24, now(), 2),
+(null, 72, 24, now(), 2),
+(null, 72, 24, now(), 2);
+
 

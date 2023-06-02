@@ -56,6 +56,13 @@
                         <br>
                         <label for="confirmarSenha">Confirmar senha</label>
                         <input class="input-text" type="password" id="confirmarSenha" >
+                        <br>
+                        <label for="privilegioAdmin">Permissões do usuário</label>
+                        <select class="input-text" name="privilegioAdmin" id="privilegioAdmin">
+                            <option value="">Selecione uma opção...</option>
+                            <option value="true">Admin</option>
+                            <option value="false">Usuário padrão</option>
+                        </select>
                         <div class="buttons-form">
                             <button class="button button-register" onclick="cadastrar()">Cadastrar</button>
                         </div>
@@ -133,9 +140,11 @@
         var emailVar = email.value;
         var senhaVar = senha.value;
         var confirmacaoSenhaVar = confirmarSenha.value;
+        var privilegioAdminVar = privilegioAdmin.value;
         var empresaVar = sessionStorage.EMPRESA_USUARIO;
-
-        if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
+        var adminVar = sessionStorage.ADMIN_USUARIO;
+        alert(privilegioAdminVar)
+        if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "" || privilegioAdminVar =="") {
             Swal.fire({
                 icon: 'error',
                 title: 'Não foi possivel completar o seu cadastro!',
@@ -143,6 +152,15 @@
                 })
             finalizarAguardar();
             return false;
+        }
+        else if(adminVar != 'true'){
+            Swal.fire({
+                icon: 'error',
+                title: 'Não foi possivel completar o seu cadastro!',
+                text: 'Você não tem permissão para cadastrar um novo usuário!',
+                })
+                finalizarAguardar();
+                return false;
         }
         else {
             setInterval(sumirMensagem, 5000)
@@ -160,6 +178,7 @@
                 nomeServer: nomeVar,
                 emailServer: emailVar,
                 senhaServer: senhaVar,
+                privilegioAdminServer: privilegioAdminVar,
                 empresaServer: empresaVar
             })
         }).then(function (resposta) {
