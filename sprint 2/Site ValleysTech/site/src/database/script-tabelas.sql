@@ -1,99 +1,92 @@
--- Arquivo de apoio, caso você queira criar tabelas como as aqui criadas para a API funcionar.
--- Você precisa executar os comandos no banco de dados para criar as tabelas,
--- ter este arquivo aqui não significa que a tabela em seu BD estará como abaixo!
+CREATE DATABASE ValleysTech;
 
-/*
-comandos para mysql - banco local - ambiente de desenvolvimento
-*/
+USE ValleysTech;
 
-CREATE DATABASE aquatech;
-
-USE aquatech;
+CREATE TABLE empresa (
+id int primary key auto_increment,
+razao_social varchar(45),
+nome_fantasia varchar(45),
+cnpj char(14)
+);
 
 CREATE TABLE usuario (
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	nome VARCHAR(50),
-	email VARCHAR(50),
-	senha VARCHAR(50)
+id int primary key auto_increment,
+nome varchar(50),
+email varchar(50),
+senha varchar(50),
+conta_admin boolean,
+fkEmpresa int,
+constraint fkEmpresa foreign key (fkEmpresa) references empresa(id)
 );
 
-CREATE TABLE aviso (
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	titulo VARCHAR(100),
-	descricao VARCHAR(150),
-	fk_usuario INT,
-	FOREIGN KEY (fk_usuario) REFERENCES usuario(id)
+CREATE TABLE endereco (
+id int primary key auto_increment,
+logradouro varchar(45),
+cidade varchar(45),
+bairro varchar(45),
+cep char(9)
 );
 
-create table aquario (
-/* em nossa regra de negócio, um aquario tem apenas um sensor */
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	descricao VARCHAR(300)
+CREATE TABLE empresa_endereco (
+id int auto_increment,
+fkEmpresa int,
+fkEndereco int,
+complemento varchar(45),
+numero varchar(5),
+constraint fkEmpresaAss foreign key (fkEmpresa) references empresa(id),
+constraint fkEnderecoAss foreign key (fkEndereco) references endereco(id),
+constraint pkEmpresa_endereco primary key (id, fkEmpresa, fkEndereco)
 );
 
-/* esta tabela deve estar de acordo com o que está em INSERT de sua API do arduino - dat-acqu-ino */
-
-create table medida (
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	dht11_umidade DECIMAL,
-	dht11_temperatura DECIMAL,
-	luminosidade DECIMAL,
-	lm35_temperatura DECIMAL,
-	chave TINYINT,
-	momento DATETIME,
-	fk_aquario INT,
-	FOREIGN KEY (fk_aquario) REFERENCES aquario(id)
+CREATE TABLE hectare (
+id int primary key auto_increment,
+descricao varchar(300),
+fkEndereco int,
+constraint fkEndereco foreign key (fkEndereco) references endereco(id),
+fkEmpresa int,
+constraint fkEmpresaHect foreign key (fkEmpresa) references empresa(id)
 );
 
-
-/*
-comando para sql server - banco remoto - ambiente de produção
-*/
-
-CREATE TABLE usuario (
-	id INT PRIMARY KEY IDENTITY(1,1),
-	nome VARCHAR(50),
-	email VARCHAR(50),
-	senha VARCHAR(50),
+CREATE TABLE sensor (
+id int primary key auto_increment,
+modelo varchar(45),
+status_sensor varchar(45),
+fkHectare int,
+constraint fkHectare foreign key (fkHectare) references hectare(id)
 );
-
-CREATE TABLE aviso (
-	id INT PRIMARY KEY IDENTITY(1,1),
-	titulo VARCHAR(100),
-	descricao VARCHAR(150),
-	fk_usuario INT FOREIGN KEY REFERENCES usuario(id)
-);
-
-create table aquario (
-/* em nossa regra de negócio, um aquario tem apenas um sensor */
-	id INT PRIMARY KEY IDENTITY(1,1),
-	descricao VARCHAR(300)
-);
-
-/* esta tabela deve estar de acordo com o que está em INSERT de sua API do arduino - dat-acqu-ino */
 
 CREATE TABLE medida (
-	id INT PRIMARY KEY IDENTITY(1,1),
-	dht11_umidade DECIMAL,
-	dht11_temperatura DECIMAL,
-	luminosidade DECIMAL,
-	lm35_temperatura DECIMAL,
-	chave TINYINT,
-	momento DATETIME,
-	fk_aquario INT FOREIGN KEY REFERENCES aquario(id)
+id int primary key auto_increment,
+dht11_umidade decimal,
+dht11_temperatura decimal,
+momento datetime,
+fkSensor int,
+constraint fkSensor foreign key (fkSensor) references sensor(id)
 );
 
-/*
-comandos para criar usuário em banco de dados azure, sqlserver,
-com permissão de insert + update + delete + select
-*/
+insert into empresa values
+(null, 'Marquinhos Uvas', 'Uvas do Mano Marquinhos', '14681276000134');
 
-CREATE USER [usuarioParaAPIWebDataViz_datawriter_datareader]
-WITH PASSWORD = '#Gf_senhaParaAPIWebDataViz',
-DEFAULT_SCHEMA = dbo;
+insert into usuario values
+(null, 'Nicolas Cage', 'nickcage@gmail.com', 'motoqueirofantasma', true, 1);
 
-EXEC sys.sp_addrolemember @rolename = N'db_datawriter',
-@membername = N'usuarioParaAPIWebDataViz_datawriter_datareader';
+insert into endereco values
+(null, 'Rua Tilambuco', 'Ponta Grossa', 'Jardim São Vicente', '02365-444');
 
-EXEC sys.sp_addrolemember @rolename = N'db_datareader',
-@membername = N'usuarioParaAPIWebDataViz_datawriter_datareader';
+insert into empresa_endereco values
+(null, 1, 1, null, '171');
+
+insert into hectare values
+(null, 'Hectare ao norte da plantação', 1, 1),
+(null, 'Hectare ao sul da plantação', 1, 1),
+(null, 'Hectare ao leste da plantação', 1, 1),
+(null, 'Hectare ao oeste da plantação', 1, 1);
+
+insert into sensor values
+(null, 'DHT-11', 'Ativo', 1),
+(null, 'DHT-11', 'Ativo', 2),
+(null, 'DHT-11', 'Ativo', 3),
+(null, 'DHT-11', 'Ativo', 4);
+
+select * from hectare;
+
